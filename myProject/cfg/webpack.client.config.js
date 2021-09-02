@@ -3,7 +3,6 @@ const NODE_ENV = process.env.NODE_ENV;
 const { HotModuleReplacementPlugin } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const express = require('express')
-const router = express.Router();
 
 const IS_DEV = NODE_ENV == 'development';
 const IS_PROD = NODE_ENV == 'production';
@@ -14,6 +13,7 @@ function setupDevtool() {
 }
 
 module.exports = {
+  mode: NODE_ENV ? NODE_ENV : 'development',
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         alias: {
@@ -43,3 +43,4 @@ module.exports = {
       new HotModuleReplacementPlugin(),
     ] : [],
 };
+

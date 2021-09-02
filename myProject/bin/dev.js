@@ -18,12 +18,12 @@ hmrServer.use(webpackDevMiddleware(clientCompiler), {
         ignore: /dist/
     },
     writeToDisk: true,
-    stats: 'error-only',
+    stats: 'errors-only',
 })
 
-hmrServer.use(webpackHotMiddleware(clientCompiler), {
+hmrServer.use(webpackHotMiddleware(clientCompiler, {
     path: '/static/__webpack_hmr'
-})
+}))
 
 hmrServer.listen(3001, () => {
     console.log('HMR server successfully started')
