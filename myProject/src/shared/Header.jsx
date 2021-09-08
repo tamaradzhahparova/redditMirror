@@ -4,8 +4,8 @@ import * as React from 'react'
 function HeaderComponent() {
     return (
         <header>
-            <h1>Reddit for our own</h1>
-            <p>Hello there</p>
+            <h1>Reddit for our own 1111йццвц</h1>
+            <p>Hello ййййй вувву</p>
         </header>
     )
 }

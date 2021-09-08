@@ -10,7 +10,7 @@ const express = require('express');
 const clientCompiler = webpack(webpackClientConfig);
 const hmrServer = express();
 
-hmrServer.use(webpackDevMiddleware(clientCompiler), {
+hmrServer.use(webpackDevMiddleware(clientCompiler, {
     publicPath: webpackClientConfig.output.publicPath,
     serverSideRender: true,
     noInfo: true,
@@ -19,7 +19,7 @@ hmrServer.use(webpackDevMiddleware(clientCompiler), {
     },
     writeToDisk: true,
     stats: 'errors-only',
-})
+}))
 
 hmrServer.use(webpackHotMiddleware(clientCompiler, {
     path: '/static/__webpack_hmr'
