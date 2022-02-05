@@ -5,7 +5,7 @@ import styles from './header.less'
 function HeaderComponent() {
     return (
         <header>
-            <h1 className={styles.example}>Hello React</h1>
+            <h1 className={styles.example}>Hello React !!!!!</h1>
         </header>
     )
 }
