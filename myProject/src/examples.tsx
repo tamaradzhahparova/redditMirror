@@ -73,6 +73,6 @@ type TGetJSXProps<E extends keyof JSX.IntrinsicElements> =
   JSX.IntrinsicElements[E];
 
 const props: TGetJSXProps<"div"> = {
-  some: "1233", // throw error потому что не содержится в атрибутах div
+  // some: "1233", // throw error потому что не содержится в атрибутах div
   className: "handler", // не выкидывает ошибку так как валидно для div элемента
 };
