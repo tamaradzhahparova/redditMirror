@@ -1,0 +1,11 @@
+.Card {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--white);
+    border-radius: 7px;
+}
+
+.Card > * {
+    flex: 1 1 100%;
+}
