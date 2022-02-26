@@ -5,7 +5,7 @@ interface ThreadTitleProps {}
 
 const ThreadTitle: FC<ThreadTitleProps> = () => (
   <div className={styles.ThreadTitle}>
-    ThreadTitle Component
+    Дискуссии
   </div>
 );
 

@@ -1,0 +1,27 @@
+.PersonalAccount {
+    align-items: center;
+}
+
+.userpick {
+    margin-right: 13px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.username {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--gray99);
+}
+
+@media (max-width: 800px) {
+    .username {
+        display: none;
+    }
+
+    .userpick {
+        width: 30px;
+        height: 30px;
+    }
+}

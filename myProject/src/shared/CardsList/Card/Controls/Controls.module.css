@@ -1,1 +1,12 @@
-.Controls {}
+.Controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonDown svg {
+    transform: rotate(180deg);
+}
+
+.count {
+    padding: 4px 0;
+}

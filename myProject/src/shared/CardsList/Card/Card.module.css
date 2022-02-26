@@ -1,11 +1,29 @@
 .Card {
     position: relative;
     display: flex;
-    flex-flow: row wrap;
+    padding-left: 48px;
+    padding-right: 67px;
     background-color: var(--white);
     border-radius: 7px;
 }
 
-.Card > * {
+.cardOptions {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    right: 5%;
+}
+
+/* .Card > * {
     flex: 1 1 100%;
+} */
+
+@media (max-width: 1100px) {
+    .Card {
+       padding: 0;
+    }
+
+    .cardOptions {
+        right: 0;
+    }
 }

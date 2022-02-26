@@ -1,1 +1,5 @@
-.ThreadTitle {}
+.ThreadTitle {
+    margin-right: 28px;
+    font-size: 28px;
+    line-height: 37px;
+}

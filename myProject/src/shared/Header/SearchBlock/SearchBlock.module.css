@@ -1,0 +1,49 @@
+.input {
+    width: 361px;
+    height: 50px;
+    margin-right: 50px;
+    padding-left: 58px;
+    background-color: var(--white);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+.input::placeholder {
+    font-size: 20px;
+    color: var(--grayC4);
+}
+
+.form {
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    left: 29px;
+    top: calc(50% - 10px);
+}
+
+@media  (max-width: 1100px) {
+    .input {
+        margin-right: 30px;
+        width: 280px;
+    }
+}
+
+@media  (max-width: 800px) {
+    .input {
+        margin-right: 14px;
+        width: 192px;
+        height: 30px;
+    }
+
+    .button {
+        left: 16px;
+        top: calc(50% - 6px);
+    }
+
+    .button svg {
+        transform: scale(0.7);
+    }
+}

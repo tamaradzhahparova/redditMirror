@@ -105,7 +105,7 @@ eval("\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);\"]);\n// Module\nexports.push([module.i, \":root {\\n    --black: #333;\\n    --orange: #CC6633;\\n    --green: #A4CC33;\\n    --whiteLightness: 100%;\\n    --white: hsl(0, 0%, var(--whiteLightness));\\n    --grayF4: hsl(0, 0%, calc(var(--whiteLightness) - 4%));\\n    --grayF3: hsl(0, 0%, calc(var(--whiteLightness) - 5%));\\n    --grayD9: hsl(0, 0%, calc(var(--whiteLightness) - 15%));\\n    --grayC4: hsl(0, 0%, calc(var(--whiteLightness) - 23%));\\n    --gray99: hsl(0, 0%, calc(var(--whiteLightness) - 40%));\\n    --gray66: hsl(0, 0%, calc(var(--whiteLightness) - 60%));\\n\\n}\\n\\nbody {\\n    padding: 0;\\n    margin: 0;\\n    background-color: var(--grayF4);\\n    font-size: 14px;\\n    line-height: 16px;\\n    font-family: 'Roboto', serif;\\n}\\n\\n* {\\n    color: var(--black);\\n    box-sizing: border-box;\\n    -webkit-font-smoothing: antialiased;\\n    -moz-osx-font-smoothing: grayscale;\\n}\\n\\nul {\\n    margin: 0;\\n    padding: 0;\\n    list-style: none;\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/main.global.css?");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);\"]);\nexports.push([module.i, \"@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap);\"]);\n// Module\nexports.push([module.i, \":root {\\n    --black: #333;\\n    --orange: #CC6633;\\n    --green: #A4CC33;\\n    --whiteLightness: 100%;\\n    --white: hsl(0, 0%, var(--whiteLightness));\\n    --grayF4: hsl(0, 0%, calc(var(--whiteLightness) - 4%));\\n    --grayF3: hsl(0, 0%, calc(var(--whiteLightness) - 5%));\\n    --grayD9: hsl(0, 0%, calc(var(--whiteLightness) - 15%));\\n    --grayC4: hsl(0, 0%, calc(var(--whiteLightness) - 23%));\\n    --gray99: hsl(0, 0%, calc(var(--whiteLightness) - 40%));\\n    --gray66: hsl(0, 0%, calc(var(--whiteLightness) - 60%));\\n\\n}\\n\\nbody {\\n    padding: 0;\\n    margin: 0;\\n    background-color: var(--grayF4);\\n    font-size: 14px;\\n    line-height: 16px;\\n    font-family: 'Roboto', serif;\\n}\\n\\n* {\\n    color: var(--black);\\n    box-sizing: border-box;\\n    -webkit-font-smoothing: antialiased;\\n    -moz-osx-font-smoothing: grayscale;\\n}\\n\\nul {\\n    margin: 0;\\n    padding: 0;\\n    list-style: none;\\n}\\n\\na {\\n    text-decoration: none;\\n}\\n\\nbutton {\\n    padding: 0;\\n    border: none;\\n    cursor: pointer;\\n    background-color: transparent;\\n}\\n\\nh1, h2, h3 {\\n    margin: 0;\\n}\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/main.global.css?");
 
 /***/ }),
 
@@ -145,6 +145,121 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 
 /***/ }),
 
+/***/ "./src/shared/CardsList/Card/Card.module.css":
+/*!***************************************************!*\
+  !*** ./src/shared/CardsList/Card/Card.module.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"Card\": \"Card-module__Card--14NKH\",\n\t\"cardOptions\": \"Card-module__cardOptions--1LADq\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Card.module.css?");
+
+/***/ }),
+
+/***/ "./src/shared/CardsList/Card/Card.tsx":
+/*!********************************************!*\
+  !*** ./src/shared/CardsList/Card/Card.tsx ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar Card_module_css_1 = __importDefault(__webpack_require__(/*! ./Card.module.css */ \"./src/shared/CardsList/Card/Card.module.css\"));\nvar Controls_1 = __importDefault(__webpack_require__(/*! ./Controls/Controls */ \"./src/shared/CardsList/Card/Controls/Controls.tsx\"));\nvar Menu_1 = __importDefault(__webpack_require__(/*! ./Menu/Menu */ \"./src/shared/CardsList/Card/Menu/Menu.tsx\"));\nvar Preview_1 = __importDefault(__webpack_require__(/*! ./Preview/Preview */ \"./src/shared/CardsList/Card/Preview/Preview.tsx\"));\nvar TextContent_1 = __importDefault(__webpack_require__(/*! ./TextContent/TextContent */ \"./src/shared/CardsList/Card/TextContent/TextContent.tsx\"));\nvar Card = function () { return (react_1.default.createElement(\"li\", { className: Card_module_css_1.default.Card },\n    react_1.default.createElement(Preview_1.default, null),\n    react_1.default.createElement(TextContent_1.default, null),\n    react_1.default.createElement(\"div\", { className: Card_module_css_1.default.cardOptions },\n        react_1.default.createElement(Menu_1.default, null),\n        react_1.default.createElement(Controls_1.default, null)))); };\nexports.default = Card;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Card.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardsList/Card/Controls/Controls.module.css":
+/*!****************************************************************!*\
+  !*** ./src/shared/CardsList/Card/Controls/Controls.module.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"Controls\": \"Controls-module__Controls--3g0bH\",\n\t\"buttonDown\": \"Controls-module__buttonDown--2aaXw\",\n\t\"count\": \"Controls-module__count--2aHrc\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Controls/Controls.module.css?");
+
+/***/ }),
+
+/***/ "./src/shared/CardsList/Card/Controls/Controls.tsx":
+/*!*********************************************************!*\
+  !*** ./src/shared/CardsList/Card/Controls/Controls.tsx ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar Controls_module_css_1 = __importDefault(__webpack_require__(/*! ./Controls.module.css */ \"./src/shared/CardsList/Card/Controls/Controls.module.css\"));\nvar Controls = function () { return (react_1.default.createElement(\"div\", { className: Controls_module_css_1.default.Controls },\n    react_1.default.createElement(\"button\", null,\n        react_1.default.createElement(\"svg\", { width: \"19\", height: \"10\", viewBox: \"0 0 19 10\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"path\", { d: \"M9.5 0L0 10H19L9.5 0Z\", fill: \"#D9D9D9\" }))),\n    react_1.default.createElement(\"span\", { className: Controls_module_css_1.default.count }, \"286\"),\n    react_1.default.createElement(\"button\", { className: Controls_module_css_1.default.buttonDown },\n        react_1.default.createElement(\"svg\", { width: \"19\", height: \"10\", viewBox: \"0 0 19 10\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"path\", { d: \"M9.5 0L0 10H19L9.5 0Z\", fill: \"#D9D9D9\" }))))); };\nexports.default = Controls;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Controls/Controls.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardsList/Card/Menu/Menu.module.css":
+/*!********************************************************!*\
+  !*** ./src/shared/CardsList/Card/Menu/Menu.module.css ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"Menu\": \"Menu-module__Menu--3dO6W\",\n\t\"menuButton\": \"Menu-module__menuButton--2iUyY\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Menu/Menu.module.css?");
+
+/***/ }),
+
+/***/ "./src/shared/CardsList/Card/Menu/Menu.tsx":
+/*!*************************************************!*\
+  !*** ./src/shared/CardsList/Card/Menu/Menu.tsx ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar Menu_module_css_1 = __importDefault(__webpack_require__(/*! ./Menu.module.css */ \"./src/shared/CardsList/Card/Menu/Menu.module.css\"));\nvar Menu = function () { return (react_1.default.createElement(\"div\", { className: Menu_module_css_1.default.Menu },\n    react_1.default.createElement(\"button\", { className: Menu_module_css_1.default.menuButton },\n        react_1.default.createElement(\"svg\", { width: \"5\", height: \"20\", viewBox: \"0 0 5 20\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"circle\", { cx: \"2.5\", cy: \"2.5\", r: \"2.5\", fill: \"#D9D9D9\" }),\n            react_1.default.createElement(\"circle\", { cx: \"2.5\", cy: \"10\", r: \"2.5\", fill: \"#D9D9D9\" }),\n            react_1.default.createElement(\"circle\", { cx: \"2.5\", cy: \"17.5\", r: \"2.5\", fill: \"#D9D9D9\" }))))); };\nexports.default = Menu;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Menu/Menu.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardsList/Card/Preview/Preview.module.css":
+/*!**************************************************************!*\
+  !*** ./src/shared/CardsList/Card/Preview/Preview.module.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"Preview\": \"Preview-module__Preview--cqBqh\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Preview/Preview.module.css?");
+
+/***/ }),
+
+/***/ "./src/shared/CardsList/Card/Preview/Preview.tsx":
+/*!*******************************************************!*\
+  !*** ./src/shared/CardsList/Card/Preview/Preview.tsx ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar Preview_module_css_1 = __importDefault(__webpack_require__(/*! ./Preview.module.css */ \"./src/shared/CardsList/Card/Preview/Preview.module.css\"));\nvar Preview = function () { return (react_1.default.createElement(\"div\", { className: Preview_module_css_1.default.Preview },\n    react_1.default.createElement(\"img\", { src: \"https://cdn.dribbble.com/users/1714897/screenshots/17600514/media/1bd5b409eaad0ab542a1eeee4ec1b473.png\", alt: \"preview image\" }))); };\nexports.default = Preview;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Preview/Preview.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/CardsList/Card/TextContent/TextContent.module.css":
+/*!**********************************************************************!*\
+  !*** ./src/shared/CardsList/Card/TextContent/TextContent.module.css ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"TextContent\": \"TextContent-module__TextContent--186pA\",\n\t\"metaData\": \"TextContent-module__metaData--2ivrO\",\n\t\"publishedAt\": \"TextContent-module__publishedAt--BmzcX\",\n\t\"userLink\": \"TextContent-module__userLink--3tgzz\",\n\t\"title\": \"TextContent-module__title--TiHxz\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/TextContent/TextContent.module.css?");
+
+/***/ }),
+
+/***/ "./src/shared/CardsList/Card/TextContent/TextContent.tsx":
+/*!***************************************************************!*\
+  !*** ./src/shared/CardsList/Card/TextContent/TextContent.tsx ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar TextContent_module_css_1 = __importDefault(__webpack_require__(/*! ./TextContent.module.css */ \"./src/shared/CardsList/Card/TextContent/TextContent.module.css\"));\nvar TextContent = function () { return (react_1.default.createElement(\"div\", { className: TextContent_module_css_1.default.TextContent },\n    react_1.default.createElement(\"h2\", { className: TextContent_module_css_1.default.title }, \"\\u0420\\u0435\\u0430\\u043B\\u0438\\u0437\\u0430\\u0446\\u0438\\u044F \\u043D\\u0430\\u043C\\u0435\\u0447\\u0435\\u043D\\u043D\\u044B\\u0445 \\u043F\\u043B\\u0430\\u043D\\u043E\\u0432\\u044B\\u0445 \\u0437\\u0430\\u0434\\u0430\\u043D\\u0438\\u0439\"),\n    react_1.default.createElement(\"div\", { className: TextContent_module_css_1.default.metaData },\n        react_1.default.createElement(\"span\", { className: TextContent_module_css_1.default.publishedAt }, \"\\u043E\\u043F\\u0443\\u0431\\u043B\\u0438\\u043A\\u043E\\u0432\\u0430\\u043D\\u043E 4 \\u0447\\u0430\\u0441\\u0430 \\u043D\\u0430\\u0437\\u0430\\u0434\"),\n        react_1.default.createElement(\"div\", { className: TextContent_module_css_1.default.userLink },\n            react_1.default.createElement(\"img\", { src: \"https://cdn-icons-png.flaticon.com/512/147/147144.png\", alt: \"avatar\" }),\n            react_1.default.createElement(\"a\", { href: \"#user-url\" }, \"\\u0414\\u043C\\u0438\\u0442\\u0440\\u0438\\u0439 \\u0413\\u0440\\u0438\\u0448\\u0438\\u043D\"))))); };\nexports.default = TextContent;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/TextContent/TextContent.tsx?");
+
+/***/ }),
+
 /***/ "./src/shared/CardsList/CardsList.module.css":
 /*!***************************************************!*\
   !*** ./src/shared/CardsList/CardsList.module.css ***!
@@ -164,7 +279,7 @@ eval("// Exports\nmodule.exports = {\n\t\"CardsList\": \"CardsList-module__Cards
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar CardsList_module_css_1 = __importDefault(__webpack_require__(/*! ./CardsList.module.css */ \"./src/shared/CardsList/CardsList.module.css\"));\nvar CardsList = function () { return (react_1.default.createElement(\"ul\", { className: CardsList_module_css_1.default.CardsList },\n    react_1.default.createElement(\"li\", null, \"1\"),\n    react_1.default.createElement(\"li\", null, \"2\"),\n    react_1.default.createElement(\"li\", null, \"3\"))); };\nexports.default = CardsList;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/CardsList.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar Card_1 = __importDefault(__webpack_require__(/*! ./Card/Card */ \"./src/shared/CardsList/Card/Card.tsx\"));\nvar CardsList_module_css_1 = __importDefault(__webpack_require__(/*! ./CardsList.module.css */ \"./src/shared/CardsList/CardsList.module.css\"));\nvar CardsList = function () { return (react_1.default.createElement(\"ul\", { className: CardsList_module_css_1.default.CardsList },\n    react_1.default.createElement(Card_1.default, null))); };\nexports.default = CardsList;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/CardsList.tsx?");
 
 /***/ }),
 
@@ -199,7 +314,64 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });\n}) : (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    o[k2] = m[k];\n}));\nvar __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {\n    Object.defineProperty(o, \"default\", { enumerable: true, value: v });\n}) : function(o, v) {\n    o[\"default\"] = v;\n});\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (k !== \"default\" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);\n    __setModuleDefault(result, mod);\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.Header = void 0;\nvar root_1 = __webpack_require__(/*! react-hot-loader/root */ \"react-hot-loader/root\");\nvar React = __importStar(__webpack_require__(/*! react */ \"react\"));\nvar header_module_css_1 = __importDefault(__webpack_require__(/*! ./header.module.css */ \"./src/shared/Header/header.module.css\"));\nvar SearchBlock_1 = __webpack_require__(/*! ./SearchBlock/SearchBlock */ \"./src/shared/Header/SearchBlock/SearchBlock.tsx\");\nvar ThreadTitle_1 = __importDefault(__webpack_require__(/*! ./ThreadTitle/ThreadTitle */ \"./src/shared/Header/ThreadTitle/ThreadTitle.tsx\"));\nvar SortBlock_1 = __importDefault(__webpack_require__(/*! ./SortBlock/SortBlock */ \"./src/shared/Header/SortBlock/SortBlock.tsx\"));\nfunction HeaderComponent() {\n    return (React.createElement(\"header\", { className: header_module_css_1.default.header },\n        React.createElement(SearchBlock_1.SearchBlock, null),\n        React.createElement(ThreadTitle_1.default, null),\n        React.createElement(SortBlock_1.default, null)));\n}\nexports.Header = root_1.hot(HeaderComponent);\n\n\n//# sourceURL=webpack:///./src/shared/Header/Header.tsx?");
+eval("\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });\n}) : (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    o[k2] = m[k];\n}));\nvar __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {\n    Object.defineProperty(o, \"default\", { enumerable: true, value: v });\n}) : function(o, v) {\n    o[\"default\"] = v;\n});\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (k !== \"default\" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);\n    __setModuleDefault(result, mod);\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.Header = void 0;\nvar root_1 = __webpack_require__(/*! react-hot-loader/root */ \"react-hot-loader/root\");\nvar React = __importStar(__webpack_require__(/*! react */ \"react\"));\nvar header_module_css_1 = __importDefault(__webpack_require__(/*! ./header.module.css */ \"./src/shared/Header/header.module.css\"));\nvar SearchBlock_1 = __webpack_require__(/*! ./SearchBlock/SearchBlock */ \"./src/shared/Header/SearchBlock/SearchBlock.tsx\");\nvar ThreadTitle_1 = __importDefault(__webpack_require__(/*! ./ThreadTitle/ThreadTitle */ \"./src/shared/Header/ThreadTitle/ThreadTitle.tsx\"));\nvar SortBlock_1 = __importDefault(__webpack_require__(/*! ./SortBlock/SortBlock */ \"./src/shared/Header/SortBlock/SortBlock.tsx\"));\nvar Mails_1 = __importDefault(__webpack_require__(/*! ./Mails/Mails */ \"./src/shared/Header/Mails/Mails.tsx\"));\nvar PersonalAccount_1 = __importDefault(__webpack_require__(/*! ./PersonalAccount/PersonalAccount */ \"./src/shared/Header/PersonalAccount/PersonalAccount.tsx\"));\nfunction HeaderComponent() {\n    return (React.createElement(\"header\", { className: header_module_css_1.default.header },\n        React.createElement(\"div\", { className: header_module_css_1.default.headerLeft },\n            React.createElement(ThreadTitle_1.default, null),\n            React.createElement(SortBlock_1.default, null)),\n        React.createElement(\"div\", { className: header_module_css_1.default.headerRight },\n            React.createElement(Mails_1.default, null),\n            React.createElement(SearchBlock_1.SearchBlock, null),\n            React.createElement(PersonalAccount_1.default, null))));\n}\nexports.Header = root_1.hot(HeaderComponent);\n\n\n//# sourceURL=webpack:///./src/shared/Header/Header.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/Header/Mails/Mails.module.css":
+/*!**************************************************!*\
+  !*** ./src/shared/Header/Mails/Mails.module.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"Mails\": \"Mails-module__Mails--aX7Ey\",\n\t\"count\": \"Mails-module__count--1GP12\",\n\t\"button\": \"Mails-module__button--Q0fhn\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Header/Mails/Mails.module.css?");
+
+/***/ }),
+
+/***/ "./src/shared/Header/Mails/Mails.tsx":
+/*!*******************************************!*\
+  !*** ./src/shared/Header/Mails/Mails.tsx ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar Mails_module_css_1 = __importDefault(__webpack_require__(/*! ./Mails.module.css */ \"./src/shared/Header/Mails/Mails.module.css\"));\nvar Mails = function () { return (react_1.default.createElement(\"div\", { className: Mails_module_css_1.default.Mails },\n    react_1.default.createElement(\"div\", { className: Mails_module_css_1.default.count }, \"4\"),\n    react_1.default.createElement(\"button\", { className: Mails_module_css_1.default.button },\n        react_1.default.createElement(\"svg\", { width: \"20\", height: \"16\", viewBox: \"0 0 20 16\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"path\", { d: \"M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z\", fill: \"#D9D9D9\" }))))); };\nexports.default = Mails;\n\n\n//# sourceURL=webpack:///./src/shared/Header/Mails/Mails.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/Header/PersonalAccount/PersonalAccount.module.css":
+/*!**********************************************************************!*\
+  !*** ./src/shared/Header/PersonalAccount/PersonalAccount.module.css ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"PersonalAccount\": \"PersonalAccount-module__PersonalAccount--uYElq\",\n\t\"userpick\": \"PersonalAccount-module__userpick--3uuzI\",\n\t\"username\": \"PersonalAccount-module__username--2gzug\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Header/PersonalAccount/PersonalAccount.module.css?");
+
+/***/ }),
+
+/***/ "./src/shared/Header/PersonalAccount/PersonalAccount.tsx":
+/*!***************************************************************!*\
+  !*** ./src/shared/Header/PersonalAccount/PersonalAccount.tsx ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar PersonalAccount_module_css_1 = __importDefault(__webpack_require__(/*! ./PersonalAccount.module.css */ \"./src/shared/Header/PersonalAccount/PersonalAccount.module.css\"));\nvar PersonalAccount = function () { return (react_1.default.createElement(\"div\", { className: PersonalAccount_module_css_1.default.PersonalAccount },\n    react_1.default.createElement(\"div\", { className: PersonalAccount_module_css_1.default.userpick },\n        react_1.default.createElement(\"svg\", { width: \"50\", height: \"50\", viewBox: \"0 0 50 50\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"path\", { d: \"M25 0C11.2 0 0 11.2 0 25C0 38.8 11.2 50 25 50C38.8 50 50 38.8 50 25C50 11.2 38.8 0 25 0ZM25 7.5C29.15 7.5 32.5 10.85 32.5 15C32.5 19.15 29.15 22.5 25 22.5C20.85 22.5 17.5 19.15 17.5 15C17.5 10.85 20.85 7.5 25 7.5ZM25 43C18.75 43 13.225 39.8 10 34.95C10.075 29.975 20 27.25 25 27.25C29.975 27.25 39.925 29.975 40 34.95C36.775 39.8 31.25 43 25 43Z\", fill: \"#D9D9D9\" }))),\n    react_1.default.createElement(\"span\", { className: PersonalAccount_module_css_1.default.username }, \"\\u0410\\u043D\\u043E\\u043D\\u0438\\u043C\"))); };\nexports.default = PersonalAccount;\n\n\n//# sourceURL=webpack:///./src/shared/Header/PersonalAccount/PersonalAccount.tsx?");
+
+/***/ }),
+
+/***/ "./src/shared/Header/SearchBlock/SearchBlock.module.css":
+/*!**************************************************************!*\
+  !*** ./src/shared/Header/SearchBlock/SearchBlock.module.css ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("// Exports\nmodule.exports = {\n\t\"input\": \"SearchBlock-module__input--1S2-i\",\n\t\"form\": \"SearchBlock-module__form--1ASbL\",\n\t\"button\": \"SearchBlock-module__button--257Br\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Header/SearchBlock/SearchBlock.module.css?");
 
 /***/ }),
 
@@ -211,7 +383,7 @@ eval("\nvar __createBinding = (this && this.__createBinding) || (Object.create ?
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.SearchBlock = void 0;\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar SearchBlock = function () {\n    return (react_1.default.createElement(\"div\", null, \"\\u041F\\u043E\\u0438\\u0441\\u043A\"));\n};\nexports.SearchBlock = SearchBlock;\n\n\n//# sourceURL=webpack:///./src/shared/Header/SearchBlock/SearchBlock.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.SearchBlock = void 0;\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar SearchBlock_module_css_1 = __importDefault(__webpack_require__(/*! ./SearchBlock.module.css */ \"./src/shared/Header/SearchBlock/SearchBlock.module.css\"));\nvar SearchBlock = function () {\n    return (react_1.default.createElement(\"div\", { className: SearchBlock_module_css_1.default.SearchBlock },\n        react_1.default.createElement(\"form\", { className: SearchBlock_module_css_1.default.form },\n            react_1.default.createElement(\"input\", { className: SearchBlock_module_css_1.default.input, type: \"text\", placeholder: \"\\u041F\\u043E\\u0438\\u0441\\u043A\" }),\n            react_1.default.createElement(\"button\", { type: \"submit\", className: SearchBlock_module_css_1.default.button },\n                react_1.default.createElement(\"svg\", { width: \"19\", height: \"19\", viewBox: \"0 0 19 19\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n                    react_1.default.createElement(\"path\", { d: \"M13.5792 11.9497H12.721L12.4168 11.6564C13.4814 10.418 14.1224 8.81018 14.1224 7.06118C14.1224 3.16124 10.9611 0 7.06118 0C3.16124 0 0 3.16124 0 7.06118C0 10.9611 3.16124 14.1224 7.06118 14.1224C8.81018 14.1224 10.418 13.4814 11.6564 12.4168L11.9497 12.721V13.5792L17.3814 19L19 17.3814L13.5792 11.9497ZM7.06118 11.9497C4.3562 11.9497 2.17267 9.76615 2.17267 7.06118C2.17267 4.3562 4.3562 2.17267 7.06118 2.17267C9.76615 2.17267 11.9497 4.3562 11.9497 7.06118C11.9497 9.76615 9.76615 11.9497 7.06118 11.9497Z\", fill: \"#C4C4C4\" }))))));\n};\nexports.SearchBlock = SearchBlock;\n\n\n//# sourceURL=webpack:///./src/shared/Header/SearchBlock/SearchBlock.tsx?");
 
 /***/ }),
 
@@ -222,7 +394,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"SortBlock\": \"SortBlock-module__SortBlock--2kHqH\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Header/SortBlock/SortBlock.module.css?");
+eval("// Exports\nmodule.exports = {\n\t\"SortBlock\": \"SortBlock-module__SortBlock--2kHqH\",\n\t\"title\": \"SortBlock-module__title--1xFtA\",\n\t\"arrow\": \"SortBlock-module__arrow--12QLR\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Header/SortBlock/SortBlock.module.css?");
 
 /***/ }),
 
@@ -234,7 +406,7 @@ eval("// Exports\nmodule.exports = {\n\t\"SortBlock\": \"SortBlock-module__SortB
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar SortBlock_module_css_1 = __importDefault(__webpack_require__(/*! ./SortBlock.module.css */ \"./src/shared/Header/SortBlock/SortBlock.module.css\"));\nvar SortBlock = function () { return (react_1.default.createElement(\"div\", { className: SortBlock_module_css_1.default.SortBlock }, \"SortBlock Component\")); };\nexports.default = SortBlock;\n\n\n//# sourceURL=webpack:///./src/shared/Header/SortBlock/SortBlock.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar SortBlock_module_css_1 = __importDefault(__webpack_require__(/*! ./SortBlock.module.css */ \"./src/shared/Header/SortBlock/SortBlock.module.css\"));\nvar SortBlock = function () { return (react_1.default.createElement(\"div\", { className: SortBlock_module_css_1.default.SortBlock },\n    react_1.default.createElement(\"svg\", { width: \"14\", height: \"16\", viewBox: \"0 0 14 16\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n        react_1.default.createElement(\"path\", { d: \"M14 16L10.6225 14.76C11.235 13.536 11.6725 12.272 11.9437 10.984L14 16ZM3.3775 14.76L0 16L2.05625 10.984C2.3275 12.272 2.765 13.536 3.3775 14.76ZM7 0C7 0 11.375 1.6 11.375 8C11.375 10.48 10.7188 12.6 9.91375 14.264C9.625 14.84 9.00375 15.2 8.3125 15.2H5.6875C4.99625 15.2 4.375 14.84 4.08625 14.264C3.29 12.6 2.625 10.48 2.625 8C2.625 1.6 7 0 7 0ZM7 8C7.9625 8 8.75 7.28 8.75 6.4C8.75 5.52 7.9625 4.8 7 4.8C6.0375 4.8 5.25 5.52 5.25 6.4C5.25 7.28 6.0375 8 7 8Z\", fill: \"#CC6633\" })),\n    react_1.default.createElement(\"span\", { className: SortBlock_module_css_1.default.title }, \"\\u041B\\u0443\\u0447\\u0448\\u0438\\u0435\"),\n    react_1.default.createElement(\"svg\", { className: SortBlock_module_css_1.default.arrow, width: \"14\", height: \"8\", viewBox: \"0 0 14 8\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n        react_1.default.createElement(\"path\", { fillRule: \"evenodd\", clipRule: \"evenodd\", d: \"M7 8L-3.16551e-07 0.712163L0.757932 2.72853e-07L7 6.49874L13.2421 1.36425e-06L14 0.712164L7 8Z\", fill: \"#CC6633\" })))); };\nexports.default = SortBlock;\n\n\n//# sourceURL=webpack:///./src/shared/Header/SortBlock/SortBlock.tsx?");
 
 /***/ }),
 
@@ -257,7 +429,7 @@ eval("// Exports\nmodule.exports = {\n\t\"ThreadTitle\": \"ThreadTitle-module__T
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar ThreadTitle_module_css_1 = __importDefault(__webpack_require__(/*! ./ThreadTitle.module.css */ \"./src/shared/Header/ThreadTitle/ThreadTitle.module.css\"));\nvar ThreadTitle = function () { return (react_1.default.createElement(\"div\", { className: ThreadTitle_module_css_1.default.ThreadTitle }, \"ThreadTitle Component\")); };\nexports.default = ThreadTitle;\n\n\n//# sourceURL=webpack:///./src/shared/Header/ThreadTitle/ThreadTitle.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar ThreadTitle_module_css_1 = __importDefault(__webpack_require__(/*! ./ThreadTitle.module.css */ \"./src/shared/Header/ThreadTitle/ThreadTitle.module.css\"));\nvar ThreadTitle = function () { return (react_1.default.createElement(\"div\", { className: ThreadTitle_module_css_1.default.ThreadTitle }, \"\\u0414\\u0438\\u0441\\u043A\\u0443\\u0441\\u0441\\u0438\\u0438\")); };\nexports.default = ThreadTitle;\n\n\n//# sourceURL=webpack:///./src/shared/Header/ThreadTitle/ThreadTitle.tsx?");
 
 /***/ }),
 
@@ -268,7 +440,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"header\": \"header-module__header--2Ruz5\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Header/header.module.css?");
+eval("// Exports\nmodule.exports = {\n\t\"header\": \"header-module__header--2Ruz5\",\n\t\"headerRight\": \"header-module__headerRight--1hDX_\",\n\t\"headerLeft\": \"header-module__headerLeft--dSeM1\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Header/header.module.css?");
 
 /***/ }),
 

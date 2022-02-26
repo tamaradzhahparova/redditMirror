@@ -4,13 +4,21 @@ import s from "./header.module.css";
 import { SearchBlock } from "./SearchBlock/SearchBlock";
 import ThreadTitle from "./ThreadTitle/ThreadTitle";
 import SortBlock from "./SortBlock/SortBlock";
+import Mails from "./Mails/Mails";
+import PersonalAccount from "./PersonalAccount/PersonalAccount";
 
 function HeaderComponent() {
   return (
     <header className={s.header}>
-      <SearchBlock />
-      <ThreadTitle />
-      <SortBlock />
+      <div className={s.headerLeft}>
+        <ThreadTitle />
+        <SortBlock />
+      </div>
+      <div className={s.headerRight}>
+        <Mails />
+        <SearchBlock />
+        <PersonalAccount />
+      </div>
     </header>
   );
 }

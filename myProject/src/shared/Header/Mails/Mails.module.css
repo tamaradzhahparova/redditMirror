@@ -1,0 +1,28 @@
+.Mails {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.count {
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    font-weight: 500;
+}
+
+.button svg {
+    transform: translate(0, 1px);
+}
+
+@media  (max-width: 1100px) {
+    .Mails {
+        margin-right: 30px;
+    }
+}
+

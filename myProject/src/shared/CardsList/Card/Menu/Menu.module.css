@@ -1,1 +1,9 @@
 .Menu {}
+
+.menuButton {
+    margin-right: 40px;
+}
+
+.menuButton svg {
+    transform: translate(0, 19px);
+}

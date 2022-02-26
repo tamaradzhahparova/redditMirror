@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 
 :root {
     --black: #333;
@@ -45,5 +47,9 @@ button {
     padding: 0;
     border: none;
     cursor: pointer;
+    background-color: transparent;
+}
 
+h1, h2, h3 {
+    margin: 0;
 }
