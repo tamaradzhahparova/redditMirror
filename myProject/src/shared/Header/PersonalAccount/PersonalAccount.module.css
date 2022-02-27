@@ -15,13 +15,21 @@
     color: var(--gray99);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 560px) {
     .username {
         display: none;
     }
 
     .userpick {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .userpick,
+    .userpick svg {
         width: 30px;
         height: 30px;
-    }
+    } 
 }
