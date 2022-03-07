@@ -152,7 +152,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"Card\": \"Card-module__Card--14NKH\",\n\t\"cardOptions\": \"Card-module__cardOptions--1LADq\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Card.module.css?");
+eval("// Exports\nmodule.exports = {\n\t\"Card\": \"Card-module__Card--14NKH\",\n\t\"cardOptions\": \"Card-module__cardOptions--1LADq\",\n\t\"dropdownMenuWrapper\": \"Card-module__dropdownMenuWrapper--3DjhU\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Card.module.css?");
 
 /***/ }),
 
@@ -164,7 +164,7 @@ eval("// Exports\nmodule.exports = {\n\t\"Card\": \"Card-module__Card--14NKH\",\
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar Card_module_css_1 = __importDefault(__webpack_require__(/*! ./Card.module.css */ \"./src/shared/CardsList/Card/Card.module.css\"));\nvar Controls_1 = __importDefault(__webpack_require__(/*! ./Controls/Controls */ \"./src/shared/CardsList/Card/Controls/Controls.tsx\"));\nvar Preview_1 = __importDefault(__webpack_require__(/*! ./Preview/Preview */ \"./src/shared/CardsList/Card/Preview/Preview.tsx\"));\nvar TextContent_1 = __importDefault(__webpack_require__(/*! ./TextContent/TextContent */ \"./src/shared/CardsList/Card/TextContent/TextContent.tsx\"));\nvar MenuButton_1 = __importDefault(__webpack_require__(/*! ./Menu/MenuButton */ \"./src/shared/CardsList/Card/Menu/MenuButton.tsx\"));\nvar Dropdown_1 = __importDefault(__webpack_require__(/*! ../../Dropdown/Dropdown */ \"./src/shared/Dropdown/Dropdown.tsx\"));\nvar DropdownList_1 = __importDefault(__webpack_require__(/*! ./DropdownList/DropdownList */ \"./src/shared/CardsList/Card/DropdownList/DropdownList.tsx\"));\nvar Card = function () { return (react_1.default.createElement(\"li\", { className: Card_module_css_1.default.Card },\n    react_1.default.createElement(Preview_1.default, null),\n    react_1.default.createElement(TextContent_1.default, null),\n    react_1.default.createElement(\"div\", { className: Card_module_css_1.default.cardOptions },\n        react_1.default.createElement(Dropdown_1.default, { button: react_1.default.createElement(MenuButton_1.default, null) },\n            react_1.default.createElement(DropdownList_1.default, null)),\n        react_1.default.createElement(Controls_1.default, null)))); };\nexports.default = Card;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Card.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar Card_module_css_1 = __importDefault(__webpack_require__(/*! ./Card.module.css */ \"./src/shared/CardsList/Card/Card.module.css\"));\nvar Controls_1 = __importDefault(__webpack_require__(/*! ./Controls/Controls */ \"./src/shared/CardsList/Card/Controls/Controls.tsx\"));\nvar Preview_1 = __importDefault(__webpack_require__(/*! ./Preview/Preview */ \"./src/shared/CardsList/Card/Preview/Preview.tsx\"));\nvar TextContent_1 = __importDefault(__webpack_require__(/*! ./TextContent/TextContent */ \"./src/shared/CardsList/Card/TextContent/TextContent.tsx\"));\nvar MenuButton_1 = __importDefault(__webpack_require__(/*! ./Menu/MenuButton */ \"./src/shared/CardsList/Card/Menu/MenuButton.tsx\"));\nvar Dropdown_1 = __importDefault(__webpack_require__(/*! ../../Dropdown/Dropdown */ \"./src/shared/Dropdown/Dropdown.tsx\"));\nvar DropdownList_1 = __importDefault(__webpack_require__(/*! ./DropdownList/DropdownList */ \"./src/shared/CardsList/Card/DropdownList/DropdownList.tsx\"));\nvar Card = function () { return (react_1.default.createElement(\"li\", { className: Card_module_css_1.default.Card },\n    react_1.default.createElement(Preview_1.default, null),\n    react_1.default.createElement(TextContent_1.default, null),\n    react_1.default.createElement(\"div\", { className: Card_module_css_1.default.cardOptions },\n        react_1.default.createElement(\"div\", { className: Card_module_css_1.default.dropdownMenuWrapper },\n            react_1.default.createElement(Dropdown_1.default, { isOpen: true, button: react_1.default.createElement(MenuButton_1.default, null) },\n                react_1.default.createElement(DropdownList_1.default, null))),\n        react_1.default.createElement(Controls_1.default, null)))); };\nexports.default = Card;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Card.tsx?");
 
 /***/ }),
 
@@ -198,7 +198,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"DropdownList\": \"DropdownList-module__DropdownList--3mvtS\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/DropdownList/DropdownList.module.css?");
+eval("// Exports\nmodule.exports = {\n\t\"DropdownList\": \"DropdownList-module__DropdownList--3mvtS\",\n\t\"menuItem\": \"DropdownList-module__menuItem--3gzT4\",\n\t\"menuItemText\": \"DropdownList-module__menuItemText--1pfB3\",\n\t\"menuItemIcon\": \"DropdownList-module__menuItemIcon--13cKR\",\n\t\"menuCloseButton\": \"DropdownList-module__menuCloseButton---i4lJ\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/DropdownList/DropdownList.module.css?");
 
 /***/ }),
 
@@ -210,7 +210,7 @@ eval("// Exports\nmodule.exports = {\n\t\"DropdownList\": \"DropdownList-module_
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar DropdownList_module_css_1 = __importDefault(__webpack_require__(/*! ./DropdownList.module.css */ \"./src/shared/CardsList/Card/DropdownList/DropdownList.module.css\"));\nvar DropdownList = function () { return (react_1.default.createElement(\"div\", { className: DropdownList_module_css_1.default.DropdownList }, \"DropdownList Component\")); };\nexports.default = DropdownList;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/DropdownList/DropdownList.tsx?");
+eval("\nvar __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });\n}) : (function(o, m, k, k2) {\n    if (k2 === undefined) k2 = k;\n    o[k2] = m[k];\n}));\nvar __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {\n    Object.defineProperty(o, \"default\", { enumerable: true, value: v });\n}) : function(o, v) {\n    o[\"default\"] = v;\n});\nvar __importStar = (this && this.__importStar) || function (mod) {\n    if (mod && mod.__esModule) return mod;\n    var result = {};\n    if (mod != null) for (var k in mod) if (k !== \"default\" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);\n    __setModuleDefault(result, mod);\n    return result;\n};\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importStar(__webpack_require__(/*! react */ \"react\"));\nvar DropdownList_module_css_1 = __importDefault(__webpack_require__(/*! ./DropdownList.module.css */ \"./src/shared/CardsList/Card/DropdownList/DropdownList.module.css\"));\nvar generateRandomIndex_1 = __webpack_require__(/*! ../../../../utils/js/generateRandomIndex */ \"./src/utils/js/generateRandomIndex.ts\");\nvar LIST = [\n    {\n        icon: react_1.default.createElement(\"svg\", { width: \"15\", height: \"15\", viewBox: \"0 0 15 15\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"path\", { d: \"M12.75 0.416626H1.41667C0.6375 0.416626 0 1.05413 0 1.83329V10.3333C0 11.1125 0.6375 11.75 1.41667 11.75H11.3333L14.1667 14.5833V1.83329C14.1667 1.05413 13.5292 0.416626 12.75 0.416626ZM11.3333 8.91663H2.83333V7.49996H11.3333V8.91663ZM11.3333 6.79163H2.83333V5.37496H11.3333V6.79163ZM11.3333 4.66663H2.83333V3.24996H11.3333V4.66663Z\", fill: \"#999999\" })),\n        text: 'Комментарии',\n    },\n    {\n        icon: react_1.default.createElement(\"svg\", { width: \"12\", height: \"14\", viewBox: \"0 0 12 14\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"path\", { d: \"M10 9.89558C9.49333 9.89558 9.04 10.1064 8.69333 10.4367L3.94 7.52008C3.97333 7.35843 4 7.19679 4 7.02811C4 6.85944 3.97333 6.69779 3.94 6.53614L8.64 3.64759C9 3.999 9.47333 4.21687 10 4.21687C11.1067 4.21687 12 3.2751 12 2.10843C12 0.941767 11.1067 0 10 0C8.89333 0 8 0.941767 8 2.10843C8 2.27711 8.02667 2.43875 8.06 2.6004L3.36 5.48896C3 5.13755 2.52667 4.91968 2 4.91968C0.893333 4.91968 0 5.86145 0 7.02811C0 8.19478 0.893333 9.13655 2 9.13655C2.52667 9.13655 3 8.91867 3.36 8.56727L8.10667 11.491C8.07333 11.6386 8.05333 11.7932 8.05333 11.9478C8.05333 13.0793 8.92667 14 10 14C11.0733 14 11.9467 13.0793 11.9467 11.9478C11.9467 10.8163 11.0733 9.89558 10 9.89558Z\", fill: \"#999999\" })),\n        text: 'Поделиться',\n    },\n    {\n        icon: react_1.default.createElement(\"svg\", { width: \"14\", height: \"14\", viewBox: \"0 0 14 14\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"path\", { d: \"M7 0C3.136 0 0 3.136 0 7C0 10.864 3.136 14 7 14C10.864 14 14 10.864 14 7C14 3.136 10.864 0 7 0ZM7 12.6C3.906 12.6 1.4 10.094 1.4 7C1.4 5.705 1.841 4.515 2.583 3.57L10.43 11.417C9.485 12.159 8.295 12.6 7 12.6ZM11.417 10.43L3.57 2.583C4.515 1.841 5.705 1.4 7 1.4C10.094 1.4 12.6 3.906 12.6 7C12.6 8.295 12.159 9.485 11.417 10.43Z\", fill: \"#999999\" })),\n        text: 'Скрыть',\n    },\n    {\n        icon: react_1.default.createElement(\"svg\", { width: \"14\", height: \"14\", viewBox: \"0 0 14 14\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"path\", { d: \"M1.4 2.8H0V12.6C0 13.37 0.63 14 1.4 14H11.2V12.6H1.4V2.8ZM12.6 0H4.2C3.43 0 2.8 0.63 2.8 1.4V9.8C2.8 10.57 3.43 11.2 4.2 11.2H12.6C13.37 11.2 14 10.57 14 9.8V1.4C14 0.63 13.37 0 12.6 0ZM11.9 6.3H9.1V9.1H7.7V6.3H4.9V4.9H7.7V2.1H9.1V4.9H11.9V6.3Z\", fill: \"#979797\" })),\n        text: 'Сохранить',\n    },\n    {\n        icon: react_1.default.createElement(\"svg\", { width: \"16\", height: \"14\", viewBox: \"0 0 16 14\", fill: \"none\", xmlns: \"http://www.w3.org/2000/svg\" },\n            react_1.default.createElement(\"path\", { d: \"M0 14H16L8 0L0 14ZM8.72727 11.7895H7.27273V10.3158H8.72727V11.7895ZM8.72727 8.8421H7.27273V5.89474H8.72727V8.8421Z\", fill: \"#999999\" })),\n        text: 'Пожаловаться',\n    }\n].map(generateRandomIndex_1.generateId);\nvar DropdownList = function () {\n    var _a = react_1.useState(LIST), list = _a[0], setList = _a[1];\n    console.log(list);\n    return (react_1.default.createElement(react_1.default.Fragment, null,\n        react_1.default.createElement(\"ul\", { className: DropdownList_module_css_1.default.DropdownList }, list.map(function (item) { return react_1.default.createElement(MenuDropdownItem, { icon: item.icon, id: item.id, text: item.text }); })),\n        react_1.default.createElement(\"button\", { className: DropdownList_module_css_1.default.menuCloseButton }, \"\\u0417\\u0430\\u043A\\u0440\\u044B\\u0442\\u044C\")));\n};\nvar MenuDropdownItem = function (_a) {\n    var text = _a.text, icon = _a.icon, id = _a.id;\n    return (react_1.default.createElement(\"li\", { key: id, className: DropdownList_module_css_1.default.menuItem },\n        react_1.default.createElement(\"div\", { className: DropdownList_module_css_1.default.menuItemIcon }, icon),\n        react_1.default.createElement(\"div\", { className: DropdownList_module_css_1.default.menuItemText }, text)));\n};\nexports.default = DropdownList;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/DropdownList/DropdownList.tsx?");
 
 /***/ }),
 
@@ -221,7 +221,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"menuButton\": \"MenuButton-module__menuButton--2R3tD\",\n\t\"Menu\": \"MenuButton-module__Menu--3ha-n\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Menu/MenuButton.module.css?");
+eval("// Exports\nmodule.exports = {\n\t\"menuButton\": \"MenuButton-module__menuButton--2R3tD\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/Menu/MenuButton.module.css?");
 
 /***/ }),
 
@@ -359,7 +359,7 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("// Exports\nmodule.exports = {\n\t\"Dropdown\": \"Dropdown-module__Dropdown--Z9wI-\",\n\t\"listContainer\": \"Dropdown-module__listContainer--27EIN\",\n\t\"list\": \"Dropdown-module__list--3PfZ6\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Dropdown/Dropdown.module.css?");
+eval("// Exports\nmodule.exports = {\n\t\"Dropdown\": \"Dropdown-module__Dropdown--Z9wI-\"\n};\n\n\n//# sourceURL=webpack:///./src/shared/Dropdown/Dropdown.module.css?");
 
 /***/ }),
 
@@ -533,6 +533,30 @@ eval("// Exports\nmodule.exports = {\n\t\"wrapper\": \"Layout-module__wrapper--2
 
 "use strict";
 eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.Layout = void 0;\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"react\"));\nvar Layout_module_css_1 = __importDefault(__webpack_require__(/*! ./Layout.module.css */ \"./src/shared/Layout/Layout.module.css\"));\nvar Layout = function (_a) {\n    var children = _a.children;\n    return react_1.default.createElement(\"div\", { className: Layout_module_css_1.default.wrapper }, children);\n};\nexports.Layout = Layout;\n\n\n//# sourceURL=webpack:///./src/shared/Layout/Layout.tsx?");
+
+/***/ }),
+
+/***/ "./src/utils/js/assoc.ts":
+/*!*******************************!*\
+  !*** ./src/utils/js/assoc.ts ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nvar __assign = (this && this.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.assoc = void 0;\nfunction assoc(key, value) {\n    return function (obj) {\n        var _a;\n        return (__assign(__assign({}, obj), (_a = {}, _a[key] = value, _a)));\n    };\n}\nexports.assoc = assoc;\n\n\n//# sourceURL=webpack:///./src/utils/js/assoc.ts?");
+
+/***/ }),
+
+/***/ "./src/utils/js/generateRandomIndex.ts":
+/*!*********************************************!*\
+  !*** ./src/utils/js/generateRandomIndex.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.generateId = exports.generateRandomString = void 0;\nvar assoc_1 = __webpack_require__(/*! ./assoc */ \"./src/utils/js/assoc.ts\");\nvar generateRandomString = function () {\n    return Math.random().toString(36).substring(2, 15);\n};\nexports.generateRandomString = generateRandomString;\nvar generateId = function (obj) {\n    return assoc_1.assoc(\"id\", exports.generateRandomString())(obj);\n};\nexports.generateId = generateId;\n\n\n//# sourceURL=webpack:///./src/utils/js/generateRandomIndex.ts?");
 
 /***/ }),
 

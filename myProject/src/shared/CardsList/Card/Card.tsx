@@ -14,9 +14,11 @@ const Card: FC<CardProps> = () => (
     <Preview />
     <TextContent />
     <div className={styles.cardOptions}>
-      <Dropdown button={ <MenuButton />}>
-        <DropdownList />
-      </Dropdown>
+      <div className={styles.dropdownMenuWrapper}>
+        <Dropdown isOpen button={ <MenuButton />}>
+          <DropdownList />
+        </Dropdown>
+      </div>
       <Controls />
     </div>
   </li>

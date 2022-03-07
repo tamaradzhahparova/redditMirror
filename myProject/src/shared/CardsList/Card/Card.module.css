@@ -9,6 +9,7 @@
 }
 
 .cardOptions {
+    position: relative;
     display: flex;
     align-self: center;
     align-items: center;
@@ -30,6 +31,24 @@
         padding-top: 22px;
         padding-bottom: 40px;
     }
+
+    .cardOptions {
+        position: unset;
+    }
+
+    .dropdownMenuWrapper {
+        position: absolute;
+        top: 19px;
+        right: 14px;
+    }
+
+    /*.cardOptions {*/
+    /*    position: absolute;*/
+    /*    bottom: 0;*/
+    /*    left: 0;*/
+    /*    right: 0;*/
+
+    /*}*/
 
     /* .Card > * {
         flex: 1 1 100%;
