@@ -15,7 +15,7 @@ const Card: FC<CardProps> = () => (
     <TextContent />
     <div className={styles.cardOptions}>
       <div className={styles.dropdownMenuWrapper}>
-        <Dropdown isOpen button={ <MenuButton />}>
+        <Dropdown button={ <MenuButton />}>
           <DropdownList />
         </Dropdown>
       </div>

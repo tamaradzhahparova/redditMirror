@@ -50,14 +50,14 @@ interface DropdownListProps {
 
 
 const DropdownList: FC<DropdownListProps> = () => {
-  const [list, setList] = useState(LIST)
-  console.log(list)
+  const [list] = useState(LIST)
   return (
     <>
       <ul className={styles.DropdownList}>
-        {list.map((item) => <MenuDropdownItem icon={item.icon} id={item.id} text={item.text}/>)}
+        {list.map((item) => <MenuDropdownItem icon={item.icon} key={item.id} text={item.text}/>)}
+        <button className={styles.menuCloseButton}>Закрыть</button>
       </ul>
-      <button className={styles.menuCloseButton}>Закрыть</button>
+     
     </>
    
   )
@@ -66,15 +66,14 @@ const DropdownList: FC<DropdownListProps> = () => {
 interface IMenuDropdownItem {
   icon: React.SVGProps<SVGSVGElement>
   text: string
-  id: string
+  key: string
 }
 
-const MenuDropdownItem: FC<IMenuDropdownItem> = ({text, icon, id}) => (
+const MenuDropdownItem: FC<IMenuDropdownItem> = ({text, icon}) => (
   <li
-    key={id}
     className={styles.menuItem}>
     <div className={styles.menuItemIcon}>{icon}</div>
-    <div className={styles.menuItemText}>{text}</div>
+    <button className={styles.menuItemText}>{text}</button>
   </li>
 )
 
