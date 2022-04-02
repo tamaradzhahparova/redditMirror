@@ -7,3 +7,15 @@
         padding: 41px 37px 41px 40px;
     }
 }
+
+@media (max-width: 800px) {
+    .CardsList {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .CardsList {
+        padding: 0;
+    }
+}

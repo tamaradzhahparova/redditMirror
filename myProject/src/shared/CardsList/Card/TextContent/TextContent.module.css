@@ -1,34 +1,36 @@
 .TextContent {
+    margin-right: 30px;
     padding-left: 39px;
     padding-top: 31px;
+    flex: 1;
 }
 
-.metaData {
-    display: flex;
-    align-items: center;
-}
-
-.publishedAt {
-    margin-right: 6px;
-    color: var(--gray99);
-}
-
-.userLink {
-    display: flex;
-    align-items: center;
-}
-
-.userLink img {
-    margin-right: 8px;
-    width: 20px;
-}
-
-.userLink a {
-    color: var(--orange);
-}
 
 .title {
     margin-bottom: 12px;
     font-size: 20px;
     font-weight: normal;
+}
+
+@media (max-width: 800px) {
+    .TextContent {
+       padding-top: 20px;
+       padding-left: 15px;
+       padding-right: 15px;
+       margin-right: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .TextContent {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 20px 16px 20px;
+    }
+
+    .title {
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 0;
+    }
 }

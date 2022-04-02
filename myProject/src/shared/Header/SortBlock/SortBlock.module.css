@@ -1,6 +1,5 @@
 .SortBlock {
     padding-top: 11px;
-
 }
 
 .title {
@@ -12,4 +11,32 @@
 
 .arrow {
     transform: translate(0, 7px);
+}
+
+@media  (max-width: 800px) {
+    .SortBlock {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 10px 14px 10px 20px;
+        background-color: var(--white);
+        border-radius: 7px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+
+    .rocketIcon {
+        width: 9px;
+        height: 11px;
+    }
+
+    .arrow {
+        position: absolute;
+        right: 20px;
+        width: 10px;
+        height: 6px;
+        transform: unset
+    }
 }

@@ -1,9 +1,11 @@
 import React, { FC } from "react";
 import styles from "./Card.module.css";
 import Controls from "./Controls/Controls";
-import Menu from "./Menu/Menu";
 import Preview from "./Preview/Preview";
 import TextContent from "./TextContent/TextContent";
+import MenuButton from "./Menu/MenuButton";
+import Dropdown from "../../Dropdown/Dropdown";
+import DropdownList from "./DropdownList/DropdownList";
 
 interface CardProps {}
 
@@ -12,7 +14,11 @@ const Card: FC<CardProps> = () => (
     <Preview />
     <TextContent />
     <div className={styles.cardOptions}>
-      <Menu />
+      <div className={styles.dropdownMenuWrapper}>
+        <Dropdown button={ <MenuButton />}>
+          <DropdownList />
+        </Dropdown>
+      </div>
       <Controls />
     </div>
   </li>

@@ -1,3 +1,5 @@
+.SearchBlock {}
+
 .input {
     width: 361px;
     height: 50px;
@@ -32,18 +34,40 @@
 }
 
 @media  (max-width: 800px) {
+    .SearchBlock {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
     .input {
-        margin-right: 14px;
+        margin-right: 0;
+        background-color: var(--grayF4);
+    } 
+}
+
+@media  (max-width: 560px) {
+    .SearchBlock {
+        margin: 0;
+    }
+}
+
+@media  (max-width: 450px) {
+    .input {
+        padding-left: 31px;
         width: 192px;
         height: 30px;
     }
 
     .button {
-        left: 16px;
-        top: calc(50% - 6px);
+        left: 12px;
+        top: 5px;
     }
 
     .button svg {
         transform: scale(0.7);
+    }
+
+    .input::placeholder {
+        font-size: 12px;
     }
 }

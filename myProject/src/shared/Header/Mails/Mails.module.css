@@ -26,3 +26,26 @@
     }
 }
 
+@media  (max-width: 800px) {
+    .Mails {
+        margin-right: 0;
+        justify-content: end;
+    }
+}
+
+@media  (max-width: 450px) {
+    .button, 
+    .button svg {
+        width: 13px;
+        height: 13px;
+        transform: unset;
+    }
+
+    .count {
+        margin-right: 4px;
+        width: 13px;
+        height: 13px;
+        font-size: 9px;
+    }
+}
+
