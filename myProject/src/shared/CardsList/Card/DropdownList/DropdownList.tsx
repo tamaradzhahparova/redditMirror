@@ -57,9 +57,8 @@ const DropdownList: FC<DropdownListProps> = () => {
         {list.map((item) => <MenuDropdownItem icon={item.icon} key={item.id} text={item.text}/>)}
         <button className={styles.menuCloseButton}>Закрыть</button>
       </ul>
-     
     </>
-   
+
   )
 };
 

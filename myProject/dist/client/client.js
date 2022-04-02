@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "50ebbbc0df5bf8740651";
+/******/ 	var hotCurrentHash = "f89abdd9c4d2962c90c9";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -915,7 +915,7 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".TextContent-module__TextContent--186pA {\\n    margin-right: 30px;\\n    padding-left: 39px;\\n    padding-top: 31px;\\n    flex: 1;\\n}\\n\\n\\n.TextContent-module__title--TiHxz {\\n    margin-bottom: 12px;\\n    font-size: 20px;\\n    font-weight: normal;\\n}\\n\\n@media (max-width: 800px) {\\n    .TextContent-module__TextContent--186pA {\\n       padding-top: 20px;\\n       padding-left: 15px;\\n       padding-right: 15px;\\n       margin-right: 0;\\n    }\\n}\\n\\n@media (max-width: 700px) {\\n    .TextContent-module__TextContent--186pA {\\n        display: flex;\\n        flex-direction: column-reverse;\\n        padding: 0 20px 16px 20px;\\n    }\\n\\n    .TextContent-module__title--TiHxz {\\n        font-size: 16px;\\n        line-height: 19px;\\n        margin-bottom: 0;\\n    }\\n}\", \"\"]);\n// Exports\nexports.locals = {\n\t\"TextContent\": \"TextContent-module__TextContent--186pA\",\n\t\"title\": \"TextContent-module__title--TiHxz\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/TextContent/TextContent.module.css?./node_modules/css-loader/dist/cjs.js??ref--5-1");
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".TextContent-module__TextContent--186pA {\\n    margin-right: 30px;\\n    padding-left: 39px;\\n    padding-top: 31px;\\n    flex: 1;\\n}\\n\\n.TextContent-module__title--TiHxz {\\n    margin-bottom: 12px;\\n    font-size: 20px;\\n    font-weight: normal;\\n}\\n\\n@media (max-width: 800px) {\\n    .TextContent-module__TextContent--186pA {\\n       padding-top: 20px;\\n       padding-left: 15px;\\n       padding-right: 15px;\\n       margin-right: 0;\\n    }\\n}\\n\\n@media (max-width: 700px) {\\n    .TextContent-module__TextContent--186pA {\\n        display: flex;\\n        flex-direction: column-reverse;\\n        padding: 0 20px 16px 20px;\\n    }\\n\\n    .TextContent-module__title--TiHxz {\\n        font-size: 16px;\\n        line-height: 19px;\\n        margin-bottom: 0;\\n    }\\n}\", \"\"]);\n// Exports\nexports.locals = {\n\t\"TextContent\": \"TextContent-module__TextContent--186pA\",\n\t\"title\": \"TextContent-module__title--TiHxz\"\n};\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Card/TextContent/TextContent.module.css?./node_modules/css-loader/dist/cjs.js??ref--5-1");
 
 /***/ }),
 
@@ -1952,7 +1952,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexport
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! /Users/personal/code/gitlab/reactjs/myProject/src/client/index.jsx */\"./src/client/index.jsx\");\nmodule.exports = __webpack_require__(/*! webpack-hot-middleware/client?path=http://localhost:3001/static/__webpack_hmr */\"./node_modules/webpack-hot-middleware/client.js?path=http://localhost:3001/static/__webpack_hmr\");\n\n\n//# sourceURL=webpack:///multi_./src/client/index.jsx_webpack-hot-middleware/client?");
+eval("__webpack_require__(/*! /Users/Тома/code/gitlab/reactjs/myProject/src/client/index.jsx */\"./src/client/index.jsx\");\nmodule.exports = __webpack_require__(/*! webpack-hot-middleware/client?path=http://localhost:3001/static/__webpack_hmr */\"./node_modules/webpack-hot-middleware/client.js?path=http://localhost:3001/static/__webpack_hmr\");\n\n\n//# sourceURL=webpack:///multi_./src/client/index.jsx_webpack-hot-middleware/client?");
 
 /***/ })
 
