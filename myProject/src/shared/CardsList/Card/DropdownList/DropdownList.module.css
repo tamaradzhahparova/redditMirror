@@ -46,7 +46,7 @@
 }
 
 .menuItem:not(:nth-last-child(-n+2)) {
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid var(--grayEC);
 }
 
 .menuCloseButton {
