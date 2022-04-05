@@ -1,10 +1,15 @@
-import React, { FC } from "react";
+import React, {FC} from "react";
 import styles from "./PersonalAccount.module.css";
 
-interface PersonalAccountProps {}
+interface PersonalAccountProps {
+}
+
+// console.log(process.env)
 
 const PersonalAccount: FC<PersonalAccountProps> = () => (
-  <div className={styles.PersonalAccount}>
+  <a
+    href={`https://www.reddit.com/api/v1/authorize?client_id=${process.env.CLIENT_ID}&response_type=code&state=RANDOM_STRING&redirect_uri=http://localhost:3000/auth&duration=permanent&scope=read submit identity`}
+    className={styles.PersonalAccount}>
     <div className={styles.userpick}>
       <svg
         width="50"
@@ -20,7 +25,7 @@ const PersonalAccount: FC<PersonalAccountProps> = () => (
       </svg>
     </div>
     <span className={styles.username}>Аноним</span>
-  </div>
+  </a>
 );
 
 export default PersonalAccount;
