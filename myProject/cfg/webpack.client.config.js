@@ -1,9 +1,9 @@
 const path = require("path");
 const NODE_ENV = process.env.NODE_ENV;
-const { HotModuleReplacementPlugin } = require("webpack");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const IS_DEV = NODE_ENV == "development";
-const IS_PROD = NODE_ENV == "production";
+const {HotModuleReplacementPlugin} = require("webpack");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const IS_DEV = NODE_ENV === "development";
+const IS_PROD = NODE_ENV === "production";
 
 const GLOBAL_CSS_REGEXP = /\.global\.css$/;
 
@@ -20,7 +20,6 @@ module.exports = {
       "react-dom": IS_DEV ? "@hot-loader/react-dom" : "react-dom",
     },
   },
-  mode: NODE_ENV ? NODE_ENV : "development",
   entry: [
     path.resolve(__dirname, "../src/client/index.jsx"),
     "webpack-hot-middleware/client?path=http://localhost:3001/static/__webpack_hmr",
@@ -62,4 +61,5 @@ module.exports = {
   plugins: IS_DEV
     ? [new CleanWebpackPlugin(), new HotModuleReplacementPlugin()]
     : [],
+
 };
