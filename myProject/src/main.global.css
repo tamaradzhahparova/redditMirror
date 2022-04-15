@@ -14,6 +14,7 @@
     --grayC4: hsl(0, 0%, calc(var(--whiteLightness) - 23%));
     --gray99: hsl(0, 0%, calc(var(--whiteLightness) - 40%));
     --gray66: hsl(0, 0%, calc(var(--whiteLightness) - 60%));
+    --grayEC: #ECECEC;
 
 }
 

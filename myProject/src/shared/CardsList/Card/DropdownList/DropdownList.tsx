@@ -46,15 +46,16 @@ const LIST = [
 ].map(generateId)
 
 interface DropdownListProps {
+  postId: number
 }
 
 
-const DropdownList: FC<DropdownListProps> = () => {
+const DropdownList: FC<DropdownListProps> = ({postId}) => {
   const [list] = useState(LIST)
   return (
     <>
       <ul className={styles.DropdownList}>
-        {list.map((item) => <MenuDropdownItem icon={item.icon} key={item.id} text={item.text}/>)}
+        {list.map((item) => <MenuDropdownItem postId={postId} icon={item.icon} key={item.id} text={item.text}/>)}
         <button className={styles.menuCloseButton}>Закрыть</button>
       </ul>
     </>
@@ -66,11 +67,12 @@ interface IMenuDropdownItem {
   icon: React.SVGProps<SVGSVGElement>
   text: string
   key: string
+  postId: number
 }
 
-const MenuDropdownItem: FC<IMenuDropdownItem> = ({text, icon}) => (
+const MenuDropdownItem: FC<IMenuDropdownItem> = ({text, icon, postId}) => (
   <li
-    className={styles.menuItem}>
+    className={styles.menuItem} onClick={() => {console.log(postId)}}>
     <div className={styles.menuItemIcon}>{icon}</div>
     <button className={styles.menuItemText}>{text}</button>
   </li>
