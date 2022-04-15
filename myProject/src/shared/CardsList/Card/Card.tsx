@@ -7,7 +7,8 @@ import MenuButton from "./Menu/MenuButton";
 import Dropdown from "../../Dropdown/Dropdown";
 import DropdownList from "./DropdownList/DropdownList";
 
-interface CardProps {}
+interface CardProps {
+}
 
 const Card: FC<CardProps> = () => (
   <li className={styles.Card}>
