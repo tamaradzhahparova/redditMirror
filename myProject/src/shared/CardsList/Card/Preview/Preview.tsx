@@ -1,15 +1,22 @@
-import React, { FC } from "react";
+import React, {FC} from "react";
 import styles from "./Preview.module.css";
 
-interface PreviewProps {}
+interface PreviewProps {
+  img: string
+}
 
-const Preview: FC<PreviewProps> = () => (
-  <div className={styles.Preview}>
-    <img
-      src="https://cdn.dribbble.com/users/1714897/screenshots/17600514/media/1bd5b409eaad0ab542a1eeee4ec1b473.png"
-      alt="preview image"
-    />
-  </div>
-);
+const Preview: FC<PreviewProps> = ({img}) => {
+  const isImage = img.slice(img.length - 3, img.length) == 'jpg'
+
+  return (
+    <div className={styles.Preview}>
+      <img
+        src={isImage ? img : 'https://srisovki.one/wp-content/uploads/2021/07/2dc87a4b6139f778befe1ee92a17ae6a.jpg'}
+        alt="preview image"
+      />
+    </div>
+  )
+
+};
 
 export default Preview;

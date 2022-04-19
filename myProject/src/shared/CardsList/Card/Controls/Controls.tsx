@@ -1,9 +1,12 @@
 import React, { FC } from "react";
 import styles from "./Controls.module.css";
 
-interface ControlsProps {}
+interface ControlsProps {
+  ups: number
+  comments: number
+}
 
-const Controls: FC<ControlsProps> = () => (
+const Controls: FC<ControlsProps> = ({ups, comments}) => (
   <div className={styles.Controls}>
     <div className={styles.likes}>
       <button>
@@ -17,7 +20,7 @@ const Controls: FC<ControlsProps> = () => (
           <path d="M9.5 0L0 10H19L9.5 0Z" fill="#D9D9D9" />
         </svg>
       </button>
-      <span className={styles.count}>286</span>
+      <span className={styles.count}>{ups}</span>
       <button className={styles.buttonDown}>
         <svg
           width="19"
@@ -45,7 +48,7 @@ const Controls: FC<ControlsProps> = () => (
             fill="#C4C4C4"
           />
         </svg>
-        <span>27</span>
+        <span>{comments}</span>
       </button>
     </div>
 

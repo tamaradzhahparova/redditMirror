@@ -10,6 +10,7 @@ import {tokenContext} from "../shared/context/tokenContext";
 export const useUserData = () => {
   const [data, setData] = useState<IUserData>({})
   const token = useContext(tokenContext)
+
   useEffect(() => {
     if (!token || token == '' || token == 'undefined') {
       return
@@ -19,7 +20,8 @@ export const useUserData = () => {
         headers: {Authorization: `bearer ${token}`}
       }).then((res) => {
       const userData = res.data;
-      setData({name: userData.name, iconImg: userData.icon_img})
+      const iconImgWithoutParams = userData.icon_img.split('?')
+      setData({name: userData.name, iconImg: iconImgWithoutParams[0]})
     }).catch(console.log)
     
   }, [token])
