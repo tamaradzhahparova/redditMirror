@@ -1,5 +1,6 @@
-import React, { FC, useEffect, useState} from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 import styles from './Dropdown.module.css';
+import {IOffset} from "../CardsList/Card/Card";
 
 interface DropdownProps {
   button: React.ReactNode
@@ -7,27 +8,36 @@ interface DropdownProps {
   isOpen?: boolean
   onOpen?: () => void
   onClose?: () => void
+  setOffsetCallback: (value: IOffset) => void
 }
 
-const noop = () => {
-}
+const Dropdown: FC<DropdownProps> = ({button, children, setOffsetCallback, isOpen}) => {
 
-const Dropdown: FC<DropdownProps> = ({button, children, onOpen = noop, isOpen, onClose = noop}) => {
-  
   const [isDropdownOpen, setIsDropdownOpen] = useState(isOpen)
-  
-  useEffect(() => setIsDropdownOpen(isOpen), [isOpen])
-  useEffect(() => isDropdownOpen ? onOpen() : onClose(), [isDropdownOpen])
-  
-  const handleOpen = () => {
-    if (isOpen === undefined) {
-      setIsDropdownOpen(!isDropdownOpen)
-    }
+  const ref = useRef<HTMLDivElement>(null)
+
+  const handleOpen = (e: any) => {
+    const {top} = document.body.getBoundingClientRect()
+    const {x, y} = e.target.getBoundingClientRect()
+    setOffsetCallback({x: x - 20, y: -top + y + 50})
+    console.log('click')
+    setIsDropdownOpen(!isDropdownOpen)
   }
-  
-  
+
+  useEffect(() => {
+    const handleClose = (e: MouseEvent) => {
+      if (e.target instanceof Node && !ref.current?.contains(e.target))
+        setIsDropdownOpen(false)
+    }
+    document.addEventListener('click', handleClose)
+    return () => {
+      document.removeEventListener('click', handleClose)
+    }
+  }, [])
+
+
   return (
-    <div className={styles.Dropdown}>
+    <div className={styles.Dropdown} ref={ref}>
       <div onClick={handleOpen}>
         {button}
       </div>

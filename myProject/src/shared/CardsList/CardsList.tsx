@@ -9,9 +9,10 @@ interface CardsListProps {
 
 const CardsList: FC<CardsListProps> = () => {
   const data: Array<IPostData> = useContext(postsContext)
+
   return (
     <ul className={styles.CardsList}>
-      {data.map((post) => <Card key={post.id} post={post}/>)}
+      {data.map((post) => <Card key={post.id} post={post} />)}
     </ul>
   )
 

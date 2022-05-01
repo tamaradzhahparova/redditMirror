@@ -1,11 +1,10 @@
 .DropdownList {
     padding: 10px 0;
     position: absolute;
-    right: 0;
-    top: calc(100% + 10px);
     background-color: var(--white);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
+    z-index: 1000;
 }
 
 .menuItem {

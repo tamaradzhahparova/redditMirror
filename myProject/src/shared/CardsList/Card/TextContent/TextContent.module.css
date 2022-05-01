@@ -6,9 +6,20 @@
 }
 
 .title {
+    text-align: start;
     margin-bottom: 12px;
     font-size: 20px;
     font-weight: normal;
+    transition: color .3s ease-in-out;
+}
+
+button {
+    display: flex;
+    justify-content: start;
+}
+
+.title:hover {
+    color: var(--orange);
 }
 
 @media (max-width: 800px) {

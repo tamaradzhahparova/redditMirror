@@ -3,6 +3,15 @@
     align-items: center;
 }
 
+.inModal {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.inModal .userLink {
+    margin-right: 5px;
+}
+
 .publishedAt {
     margin-right: 6px;
     color: var(--gray99);
@@ -20,6 +29,7 @@
 .userLink img {
     margin-right: 8px;
     width: 20px;
+    height: 20px;
     border-radius: 10px;
 }
 
@@ -45,6 +55,7 @@
     .publishedAt {
         font-size: 10px;
     }
+
     .publishedAt span {
         display: none;
     }

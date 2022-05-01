@@ -1,0 +1,49 @@
+.Post {
+    position: fixed;
+    top: 130px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+
+.PostContent {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    padding: 52px 27px 37px 60px;
+    border-radius: 7px;
+    background: var(--white);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+}
+
+.modalTitle {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: normal;
+}
+
+.PostHeader {
+    display: flex;
+}
+
+.PostHeaderRight {
+    margin-left: 20px;
+}
+
+.PostText {
+    margin: 0;
+    padding: 28px 0;
+    font-size: 14px;
+    line-height: 23px;
+}
+
+.PostImg {
+    max-width: 100%;
+    margin-bottom: 50px;
+}

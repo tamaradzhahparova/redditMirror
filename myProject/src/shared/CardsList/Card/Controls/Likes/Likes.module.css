@@ -1,0 +1,29 @@
+.Likes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonDown svg {
+    transform: rotate(180deg);
+}
+
+.count {
+    padding: 4px 0;
+}
+
+.space {
+    height: 10px;
+}
+
+@media (max-width: 700px) {
+    .Likes {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .count {
+        padding: 0 4px;
+        color: var(--grayC4);
+    }
+}

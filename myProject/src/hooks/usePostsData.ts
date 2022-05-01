@@ -1,6 +1,6 @@
 import {useContext, useEffect, useState} from "react";
-import axios from "axios";
 import {tokenContext} from "../shared/context/tokenContext";
+import {instance} from "./useUserData";
 
 export interface IPostData {
   title: string
@@ -18,10 +18,9 @@ export const usePostsData = () => {
   const token = useContext(tokenContext)
 
   useEffect(() => {
-    axios.get('https://oauth.reddit.com/best.json', {
+    instance.get('best.json', {
       headers: {Authorization: `bearer ${token}`}
     }).then((res) => {
-      console.log(res.data.data.children)
       const newPosts = res.data.data.children.map((post: any): IPostData => {
         return {
           title: post.data.title,

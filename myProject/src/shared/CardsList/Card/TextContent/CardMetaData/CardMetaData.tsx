@@ -1,11 +1,11 @@
-import React, {FC, useContext, useEffect, useState} from "react";
+import React, {FC} from "react";
 import styles from "./CardMetaData.module.css";
-import axios from "axios";
-import {tokenContext} from "../../../../context/tokenContext";
 
 interface CardMetaDataProps {
   name: string
   created: number
+  iconImg?: string
+  inModal?: boolean
 }
 
 function declOfNum(number: number, titles: Array<string>) {
@@ -14,11 +14,7 @@ function declOfNum(number: number, titles: Array<string>) {
 }
 
 
-
-const CardMetaData: FC<CardMetaDataProps> = ({name, created}) => {
-
-  const [iconImg, setIconImg] = useState('')
-  const token = useContext(tokenContext)
+const CardMetaData: FC<CardMetaDataProps> = ({name, created, iconImg, inModal}) => {
 
   const date = new Date();
   const now_utc = Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(),
@@ -26,22 +22,11 @@ const CardMetaData: FC<CardMetaDataProps> = ({name, created}) => {
   const createdAgo = Math.round((now_utc - created) / 3600000);
 
 
-  useEffect(() => {
-    if (token == 'undefined') {
-      return;
-    }
-    axios.get(`https://oauth.reddit.com/user/${name}/about`, {
-      headers: {Authorization: `bearer ${token}`}
-    }).then((res) => {
-      setIconImg(res.data.data.icon_img.split('?')[0])
-    })
-  }, [name, token])
-
   return (
-    <div className={styles.CardMetaData}>
+    <div className={inModal ? `${styles.CardMetaData} ${styles.inModal}` : styles.CardMetaData}>
       <span
         className={styles.publishedAt}>
-        <span>опубликовано</span>{`${createdAgo} ${declOfNum(createdAgo, ['час', 'часа', 'часов'])} назад`}</span>
+        <span>опубликовано</span>{` ${createdAgo} ${declOfNum(createdAgo, ['час', 'часа', 'часов'])} назад`}</span>
       <div className={styles.userLink}>
         {iconImg ? <img src={iconImg} alt='avatar'/> : <img
           src="https://cdn-icons-png.flaticon.com/512/147/147144.png"

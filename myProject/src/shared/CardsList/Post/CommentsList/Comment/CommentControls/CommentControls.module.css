@@ -1,0 +1,18 @@
+.CommentControls {
+    display: flex;
+}
+
+.CommentControls button {
+    display: flex;
+    align-items: center;
+}
+
+.CommentControls button:not(:last-child) {
+    margin-right: 27px;
+}
+
+.controlsText {
+    margin-left: 6px;
+    font-size: 14px;
+    color: var(--gray99);
+}
