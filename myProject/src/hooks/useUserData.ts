@@ -1,6 +1,6 @@
-import {useContext, useEffect, useState} from "react";
+import { useEffect, useState} from "react";
 import axios from "axios";
-import {tokenContext} from "../shared/context/tokenContext";
+import {useAppSelector} from "./reduxHooks";
 
 interface IUserData {
   name?: string
@@ -13,7 +13,7 @@ export const instance = axios.create({
 
 export const useUserData = () => {
   const [data, setData] = useState<IUserData>({})
-  const token = useContext(tokenContext)
+  const token = useAppSelector(state => state.tokenSlice.token)
 
   useEffect(() => {
     if (!token || token == '' || token == 'undefined') {

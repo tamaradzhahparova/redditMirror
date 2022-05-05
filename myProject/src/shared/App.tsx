@@ -1,42 +1,28 @@
-import React, {FC, useState} from "react";
+import React, {FC} from "react";
 import "../main.global.css";
 import {hot} from "react-hot-loader/root";
 import {Header} from "./Header/Header";
 import {Layout} from "./Layout/Layout";
 import Content from "./Content/Content";
 import CardsList from "./CardsList/CardsList";
-import {useToken} from "../hooks/useToken";
-import {tokenContext} from "./context/tokenContext";
 import {UserContextProvider} from "./context/userContext";
-import {PostsContextProvider} from "./context/postsContext";
-import {commentContext} from "./context/commentContext";
+import {Provider} from 'react-redux'
+import store from "../redux/store";
 
 const AppComponent: FC = () => {
-  const [token] = useToken()
-  const [commentValue, setCommentValue] = useState('')
-
-  const CommentProvider = commentContext.Provider
-
   return (
-    <CommentProvider value={{
-      value: commentValue,
-      setValue: setCommentValue
-    }}>
-      <tokenContext.Provider value={token}>
+    <Provider store={store}>
         <UserContextProvider>
           <Layout>
             <Header/>
             <Content>
-              <PostsContextProvider>
                 <CardsList/>
-              </PostsContextProvider>
             </Content>
           </Layout>
         </UserContextProvider>
-      </tokenContext.Provider>
-    </CommentProvider>
+    </Provider>
   );
 };
 
-export const App = hot(() => <AppComponent/>);
+export const App: React.ComponentType = hot(() => <AppComponent/>);
 

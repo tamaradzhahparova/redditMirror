@@ -1,15 +1,18 @@
-import React, {FC, useContext} from 'react';
+import React, {FC} from 'react';
 import Card from './Card/Card';
 import styles from './CardsList.module.css';
-import {postsContext} from "../context/postsContext";
-import {IPostData} from "../../hooks/usePostsData";
+import {IPostData, usePostsData} from "../../hooks/usePostsData";
+import {useAppSelector} from "../../hooks/reduxHooks";
 
 interface CardsListProps {
 }
 
 const CardsList: FC<CardsListProps> = () => {
-  const data: Array<IPostData> = useContext(postsContext)
+  
+  usePostsData()
+  const data: Array<IPostData> = useAppSelector(state => state.postsSlice.posts)
 
+  
   return (
     <ul className={styles.CardsList}>
       {data.map((post) => <Card key={post.id} post={post} />)}

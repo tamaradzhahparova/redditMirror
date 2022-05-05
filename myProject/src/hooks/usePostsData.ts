@@ -1,6 +1,7 @@
-import {useContext, useEffect, useState} from "react";
-import {tokenContext} from "../shared/context/tokenContext";
+import {useEffect} from "react";
 import {instance} from "./useUserData";
+import {useAppDispatch, useAppSelector} from "./reduxHooks";
+import {setPosts} from "../redux/postsSlice";
 
 export interface IPostData {
   title: string
@@ -14,8 +15,9 @@ export interface IPostData {
 
 export const usePostsData = () => {
 
-  const [posts, setPosts] = useState([])
-  const token = useContext(tokenContext)
+ const dispatch = useAppDispatch()
+  
+  const token = useAppSelector(state => state.tokenSlice.token)
 
   useEffect(() => {
     instance.get('best.json', {
@@ -32,13 +34,10 @@ export const usePostsData = () => {
           comments: post.data.num_comments
         }
       })
-      setPosts(newPosts)
+      dispatch(setPosts(newPosts))
     })
   }, [])
 
-  return [posts]
-
 }
 
-//to-do - save base URL in axios options
 // to-do - remove all ts-ignore and ANY

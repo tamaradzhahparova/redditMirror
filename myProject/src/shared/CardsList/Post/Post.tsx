@@ -1,13 +1,13 @@
-import React, {FC, useContext, useEffect, useRef, useState} from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 import styles from './Post.module.css';
 import ReactDOM from "react-dom";
-import CommentForm from "./CommentForm/CommentForm";
 import {TextContentProps} from "../Card/TextContent/TextContent";
 import CardMetaData from "../Card/TextContent/CardMetaData/CardMetaData";
 import Likes from "../Card/Controls/Likes/Likes";
 import CommentsList, {comment} from "./CommentsList/CommentsList";
-import {tokenContext} from "../../context/tokenContext";
 import {instance} from "../../../hooks/useUserData";
+import CommentFormContainer from "./CommentForm/CommentFormContainer";
+import {useAppSelector} from "../../../hooks/reduxHooks";
 
 interface PostProps {
   onClose?: () => void
@@ -19,7 +19,7 @@ interface PostProps {
 
 const Post: FC<PostProps> = (props) => {
   const [comments, setComments] = useState<Array<comment>>([])
-  const token = useContext(tokenContext)
+  const token = useAppSelector(state => state.tokenSlice.token)
   const node = document.querySelector('#modalRoot')
   if (!node) return null
   const ref = useRef<HTMLDivElement>(null)
@@ -47,8 +47,7 @@ const Post: FC<PostProps> = (props) => {
       }
     )
   }, [token])
-
-
+  
   return ReactDOM.createPortal((<div className={styles.Post}>
     <div className={styles.PostContent} ref={ref}>
       <div className={styles.PostHeader}>
@@ -68,7 +67,7 @@ const Post: FC<PostProps> = (props) => {
       <img src='https://img.freepik.com/free-photo/flat-lay-of-business-concept_53876-64851.jpg?w=2000'
            alt='post photo'
            className={styles.PostImg}/>
-      <CommentForm name={props.postData.name}/>
+      <CommentFormContainer name={props.postData.name}/>
       <CommentsList comments={comments}/>
 
     </div>

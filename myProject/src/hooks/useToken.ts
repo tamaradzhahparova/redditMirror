@@ -1,12 +1,14 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
+import {useAppDispatch} from "./reduxHooks";
+import {setToken} from "../redux/tokenSlice";
 
 export function useToken() {
-  const [token, setToken] = useState('')
+  const dispatch = useAppDispatch()
+  
   useEffect(() => {
     if (window.__token__) {
-      setToken(window.__token__)
+      dispatch(setToken(window.__token__))
     }
   }, [])
-
-  return [token]
+  
 }

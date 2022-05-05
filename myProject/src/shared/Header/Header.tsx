@@ -7,8 +7,7 @@ import SortBlock from "./SortBlock/SortBlock";
 import Mails from "./Mails/Mails";
 import PersonalAccount from "./PersonalAccount/PersonalAccount";
 
-function HeaderComponent() {
-  
+const HeaderComponent = () => {
   return (
     <header className={s.header}>
       <div className={s.headerLeft}>
@@ -19,7 +18,6 @@ function HeaderComponent() {
         <Mails/>
         <SearchBlock/>
         <PersonalAccount/>
-      
       </div>
     </header>
   );

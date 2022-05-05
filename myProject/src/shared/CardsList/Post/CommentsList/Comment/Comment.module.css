@@ -1,6 +1,7 @@
 
 .wrapper {
     display: flex;
+    max-width: 100%;
 }
 
 .textContent {

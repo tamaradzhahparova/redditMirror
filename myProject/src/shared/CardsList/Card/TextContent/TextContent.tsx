@@ -1,9 +1,9 @@
-import React, {FC, useContext, useEffect, useState} from "react";
+import React, {FC, useEffect, useState} from "react";
 import styles from "./TextContent.module.css";
 import CardMetaData from './CardMetaData/CardMetaData'
 import Post from "../../Post/Post";
-import {tokenContext} from "../../../context/tokenContext";
 import {instance} from "../../../../hooks/useUserData";
+import {useAppSelector} from "../../../../hooks/reduxHooks";
 
 export interface TextContentProps {
   title: string
@@ -17,7 +17,7 @@ const TextContent: FC<TextContentProps> = (props) => {
 
   const [isModalOpened, setIsModalOpened] = useState(false)
   const [iconImg, setIconImg] = useState('')
-  const token = useContext(tokenContext)
+  const token = useAppSelector(state => state.tokenSlice.token)
 
 
   useEffect(() => {
