@@ -5,9 +5,9 @@ import {TextContentProps} from "../Card/TextContent/TextContent";
 import CardMetaData from "../Card/TextContent/CardMetaData/CardMetaData";
 import Likes from "../Card/Controls/Likes/Likes";
 import CommentsList, {comment} from "./CommentsList/CommentsList";
-import {instance} from "../../../hooks/useUserData";
 import CommentFormContainer from "./CommentForm/CommentFormContainer";
 import {useAppSelector} from "../../../hooks/reduxHooks";
+import {postsApi} from "../../../api/api";
 
 interface PostProps {
   onClose?: () => void
@@ -38,11 +38,8 @@ const Post: FC<PostProps> = (props) => {
 
   useEffect(() => {
     if (token == 'undefined') return
-
-    instance.get(`comments/${props.postData.postId}.json?limit=25`, {
-      headers: {Authorization: `bearer ${token}`}
-    }).then((res) => {
-        const list = res.data[1].data.children
+    postsApi.getComments(token, props.postData.postId ).then((res) => {
+        const list = res[1].data.children
         setComments(list)
       }
     )
@@ -69,7 +66,6 @@ const Post: FC<PostProps> = (props) => {
            className={styles.PostImg}/>
       <CommentFormContainer name={props.postData.name}/>
       <CommentsList comments={comments}/>
-
     </div>
   </div>), node)
 

@@ -1,7 +1,7 @@
 import {useEffect} from "react";
-import {instance} from "./useUserData";
 import {useAppDispatch, useAppSelector} from "./reduxHooks";
 import {setPosts} from "../redux/postsSlice";
+import {postsApi} from "../api/api";
 
 export interface IPostData {
   title: string
@@ -14,16 +14,13 @@ export interface IPostData {
 }
 
 export const usePostsData = () => {
-
- const dispatch = useAppDispatch()
-  
+  const posts = useAppSelector(state => state.postsSlice.posts)
   const token = useAppSelector(state => state.tokenSlice.token)
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    instance.get('best.json', {
-      headers: {Authorization: `bearer ${token}`}
-    }).then((res) => {
-      const newPosts = res.data.data.children.map((post: any): IPostData => {
+    postsApi.getBestPosts(token).then((res) => {
+      const newPosts = res.data.children.map((post: any): IPostData => {
         return {
           title: post.data.title,
           author: post.data.author,
@@ -37,7 +34,6 @@ export const usePostsData = () => {
       dispatch(setPosts(newPosts))
     })
   }, [])
-
+  
+  return posts
 }
-
-// to-do - remove all ts-ignore and ANY

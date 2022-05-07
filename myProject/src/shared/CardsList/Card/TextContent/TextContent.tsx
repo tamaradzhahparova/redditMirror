@@ -2,8 +2,8 @@ import React, {FC, useEffect, useState} from "react";
 import styles from "./TextContent.module.css";
 import CardMetaData from './CardMetaData/CardMetaData'
 import Post from "../../Post/Post";
-import {instance} from "../../../../hooks/useUserData";
 import {useAppSelector} from "../../../../hooks/reduxHooks";
+import {userApi} from "../../../../api/api";
 
 export interface TextContentProps {
   title: string
@@ -21,13 +21,10 @@ const TextContent: FC<TextContentProps> = (props) => {
 
 
   useEffect(() => {
-    if (token == 'undefined') {
-      return;
-    }
-    instance.get(`user/${props.name}/about`, {
-      headers: {Authorization: `bearer ${token}`}
-    }).then((res) => {
-      setIconImg(res.data.data.icon_img.split('?')[0])
+    if (token == 'undefined') return;
+    
+    userApi.getUserData(token, props.name).then((res) => {
+      setIconImg(res.icon_img.split('?')[0])
     })
   }, [props.name, token])
 

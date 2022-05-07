@@ -1,15 +1,12 @@
-import React, {FC, useContext} from "react";
+import React, {FC} from "react";
 import styles from "./PersonalAccount.module.css";
-import {userContext} from "../../context/userContext";
-import {useToken} from "../../../hooks/useToken";
+import {useUserData} from "../../../hooks/useUserData";
 
 interface PersonalAccountProps {
 }
 
 const PersonalAccount: FC<PersonalAccountProps> = () => {
-  const data = useContext(userContext)
-  useToken()
-  
+  const {data, isFetching} = useUserData()
   return (
     <a
       href={`https://www.reddit.com/api/v1/authorize?client_id=${process.env.CLIENT_ID}&response_type=code&state=RANDOM_STRING&redirect_uri=http://localhost:3000/auth&duration=permanent&scope=read submit identity`}
@@ -29,7 +26,12 @@ const PersonalAccount: FC<PersonalAccountProps> = () => {
         </svg>}
       
       </div>
-      <span className={styles.username}>{data.name || 'Aноним'}</span>
+      {isFetching ? (
+        <span className={styles.username}>Загрузка...</span>
+      ) : (
+        <span className={styles.username}>{data.name || 'Aноним'}</span>
+      )}
+      
     </a>
   )
 };
