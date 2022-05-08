@@ -12,6 +12,5 @@ export const Layout = ({ children }: IChildrenProps) => {
   useEffect(() => {
     dispatch(saveToken())
   }, [])
-
   return <div className={s.wrapper}>{children}</div>;
 };

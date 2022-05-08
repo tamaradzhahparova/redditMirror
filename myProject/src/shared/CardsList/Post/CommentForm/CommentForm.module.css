@@ -34,6 +34,10 @@ label span {
     color: var(--orange);
 }
 
+.error {
+    color: red;
+}
+
 .commentButton {
     display: flex;
     justify-content: center;
