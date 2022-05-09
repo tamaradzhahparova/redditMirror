@@ -1,11 +1,29 @@
-import { createSlice } from '@reduxjs/toolkit'
+import {Action, createSlice, ThunkAction} from '@reduxjs/toolkit'
+import {RootState} from "./store";
+import {postsApi} from "../api/api";
+
+export interface IPostData {
+  title: string
+  author: string
+  photoUrl: string
+  id: string
+  ups: number
+  created: number,
+  comments: number
+}
 
 interface postsState {
-  posts: []
+  posts: Array<IPostData>
+  isFetching: boolean
+  errorLoading: string | null
+  after: string | null
 }
 
 const initialState: postsState = {
-  posts: []
+  posts: [],
+  isFetching: false,
+  errorLoading: null,
+  after: null
 }
 
 export const postsSlice = createSlice({
@@ -13,9 +31,43 @@ export const postsSlice = createSlice({
   initialState,
   reducers: {
     setPosts: (state, action) => {
-      state.posts = action.payload
-    }
+      state.posts = [...state.posts, ...action.payload]
+    },
+    postsIsFetching: (state, action) => {
+      state.isFetching = action.payload
+    },
+    setErrorMessage: (state, action) => {
+      state.errorLoading = action.payload
+    },
+    setAfter: (state, action) => {
+      state.after = action.payload
+    },
   }
 })
 
-export const { setPosts } = postsSlice.actions
+export const savePostsData = (): ThunkAction<void, RootState, unknown, Action<string>> => (dispatch, getState) => {
+  const token = getState().tokenSlice.token
+    dispatch(postsIsFetching(true));
+    postsApi.getBestPosts(token).then((res) => {
+      const newPosts = res.data.children.map((post: any): IPostData => {
+        return {
+          title: post.data.title,
+          author: post.data.author,
+          photoUrl: post.data.url,
+          id: post.data.id,
+          ups: post.data.ups,
+          created: post.data.created * 1000,
+          comments: post.data.num_comments
+        }
+      })
+      dispatch(setPosts(newPosts))
+      dispatch(setAfter(res.data.after))
+      dispatch(postsIsFetching(false))
+    }).catch((error) => {
+      dispatch(postsIsFetching(false))
+      dispatch(setErrorMessage(error.toString()));
+    })
+}
+
+
+export const { setPosts, postsIsFetching, setErrorMessage, setAfter } = postsSlice.actions

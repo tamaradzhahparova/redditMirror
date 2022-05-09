@@ -6,7 +6,7 @@ import TextContent from "./TextContent/TextContent";
 import MenuButton from "./Menu/MenuButton";
 import Dropdown from "../../Dropdown/Dropdown";
 import DropdownList from "./DropdownList/DropdownList";
-import {IPostData} from "../../../hooks/usePostsData";
+import {IPostData} from "../../../redux/postsSlice";
 
 interface CardProps {
   post: IPostData

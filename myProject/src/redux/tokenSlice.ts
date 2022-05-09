@@ -22,9 +22,9 @@ export const tokenSlice = createSlice({
 export const { setToken } = tokenSlice.actions
 
 export const saveToken = (): ThunkAction<void, RootState, unknown, Action<string>> => (dispatch) => {
-  const token = localStorage.getItem('token') || window.__token__
-  dispatch(setToken(token))
-  if (token != 'undefined') {
+  const token = window.__token__ == 'undefined' ? localStorage.getItem('token') : window.__token__
+  if (token != 'undefined' && token != null) {
+    dispatch(setToken(token))
     localStorage.setItem('token', token)
   }
 }

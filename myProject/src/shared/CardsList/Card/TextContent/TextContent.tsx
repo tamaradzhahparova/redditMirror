@@ -21,8 +21,7 @@ const TextContent: FC<TextContentProps> = (props) => {
 
 
   useEffect(() => {
-    if (token == 'undefined') return;
-    
+    if (token == 'undefined' || !token) return;
     userApi.getUserData(token, props.name).then((res) => {
       setIconImg(res.icon_img.split('?')[0])
     })

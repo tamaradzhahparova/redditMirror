@@ -39,6 +39,14 @@ module.exports = {
         test: GLOBAL_CSS_REGEXP,
         use: ["css-loader"],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   optimization: {
