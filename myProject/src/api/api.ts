@@ -27,9 +27,10 @@ export const postsApi = {
     })
     return response.data
   },
-  async getBestPosts(token: string) {
+  async getBestPosts(token: string, after: string | null) {
     const response = await instance.get('best.json', {
-      headers: {Authorization: `bearer ${token}`}
+      headers: {Authorization: `bearer ${token}`},
+      params: {limit: 10, after: after}
     })
     return response.data
   }

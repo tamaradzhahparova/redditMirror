@@ -31,7 +31,7 @@ export const postsSlice = createSlice({
   initialState,
   reducers: {
     setPosts: (state, action) => {
-      state.posts = [...state.posts, ...action.payload]
+      state.posts = state.posts.concat(...action.payload)
     },
     postsIsFetching: (state, action) => {
       state.isFetching = action.payload
@@ -47,8 +47,9 @@ export const postsSlice = createSlice({
 
 export const savePostsData = (): ThunkAction<void, RootState, unknown, Action<string>> => (dispatch, getState) => {
   const token = getState().tokenSlice.token
+  const after = getState().postsSlice.after
     dispatch(postsIsFetching(true));
-    postsApi.getBestPosts(token).then((res) => {
+    postsApi.getBestPosts(token, after).then((res) => {
       const newPosts = res.data.children.map((post: any): IPostData => {
         return {
           title: post.data.title,

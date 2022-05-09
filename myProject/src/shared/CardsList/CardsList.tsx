@@ -17,18 +17,21 @@ const CardsList: FC<CardsListProps> = () => {
   useEffect(() => {
     dispatch(savePostsData())
   }, [])
-
-  console.log('!!')
-
+  
+  console.log(posts.length)
+const loadMore = (isIntersecting: boolean) => {
+  if (isIntersecting && posts.length > 0) {
+    console.log('load more')
+    dispatch(savePostsData())
+  }
+}
 
   useEffect(() => {
-    console.log('hook')
-    const observer = new IntersectionObserver(() => {
-      console.log('load more')
+    const observer = new IntersectionObserver((entries) => {
+      loadMore(entries[0].isIntersecting)
     }, {
       rootMargin: '100px'
     })
-
     if (bottomOfList.current) {
       observer.observe(bottomOfList.current)
     }
@@ -37,16 +40,14 @@ const CardsList: FC<CardsListProps> = () => {
         observer.unobserve(bottomOfList.current)
       }
     }
-  }, [bottomOfList.current])
+  }, [bottomOfList.current, posts])
 
   return (
     <ul className={styles.CardsList}>
       {isFetching && <div style={{textAlign: 'center'}}>Загрузка...</div>}
       {errorLoading && <div style={{textAlign: 'center'}}>{errorLoading}</div>}
-      {!isFetching && !errorLoading && <>
-        {posts.map((post) => <Card key={post.id} post={post}/>)}
-        {posts.length > 0 && <div ref={bottomOfList}>bottom</div>}
-      </>}
+      {!errorLoading && posts.map((post) => <Card key={post.id} post={post}/>)}
+      <div ref={bottomOfList} />
     </ul>
   )
 };
