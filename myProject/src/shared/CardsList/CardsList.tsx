@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useRef} from 'react';
+import React, {FC, useEffect, useRef, useState} from 'react';
 import Card from './Card/Card';
 import styles from './CardsList.module.css';
 import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
@@ -13,19 +13,25 @@ const CardsList: FC<CardsListProps> = () => {
   const posts = useAppSelector(state => state.postsSlice.posts)
   const bottomOfList = useRef<HTMLDivElement>(null)
   const dispatch = useAppDispatch()
-
+  const [page, setPage] = useState(1)
+  const isThirdLoad = page % 3 === 0
+  
+ const handleClick = () => {
+   setPage(prevState => prevState + 1)
+ }
+  
   useEffect(() => {
     dispatch(savePostsData())
   }, [])
   
-  console.log(posts.length)
-const loadMore = (isIntersecting: boolean) => {
-  if (isIntersecting && posts.length > 0) {
-    console.log('load more')
-    dispatch(savePostsData())
+  const loadMore = (isIntersecting: boolean) => {
+    if (isIntersecting && posts.length > 0 && !isThirdLoad && !isFetching) {
+      console.log('in observe dispatch')
+      dispatch(savePostsData())
+      setPage(prevState => prevState + 1)
+    }
   }
-}
-
+  
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       loadMore(entries[0].isIntersecting)
@@ -40,14 +46,18 @@ const loadMore = (isIntersecting: boolean) => {
         observer.unobserve(bottomOfList.current)
       }
     }
-  }, [bottomOfList.current, posts])
-
+  }, [bottomOfList.current, posts, page, isFetching])
+  
   return (
     <ul className={styles.CardsList}>
-      {isFetching && <div style={{textAlign: 'center'}}>Загрузка...</div>}
+     
       {errorLoading && <div style={{textAlign: 'center'}}>{errorLoading}</div>}
       {!errorLoading && posts.map((post) => <Card key={post.id} post={post}/>)}
-      <div ref={bottomOfList} />
+      <div ref={bottomOfList}/>
+      {isThirdLoad && !isFetching && <div className={styles.loadMoreWrapper}>
+          <button onClick={handleClick} className={styles.loadMoreButton}>Load More</button>
+      </div>}
+      {isFetching && <div style={{textAlign: 'center'}}>Загрузка...</div>}
     </ul>
   )
 };
