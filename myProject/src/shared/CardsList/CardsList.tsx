@@ -19,11 +19,7 @@ const CardsList: FC<CardsListProps> = () => {
  const handleClick = () => {
    setPage(prevState => prevState + 1)
  }
-  
-  useEffect(() => {
-    dispatch(savePostsData())
-  }, [])
-  
+ 
   const loadMore = (isIntersecting: boolean) => {
     if (isIntersecting && posts.length > 0 && !isThirdLoad && !isFetching) {
       console.log('in observe dispatch')

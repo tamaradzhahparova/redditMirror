@@ -61,6 +61,7 @@ export const savePostsData = (): ThunkAction<void, RootState, unknown, Action<st
           comments: post.data.num_comments
         }
       })
+      console.log(res.data.children)
       dispatch(setPosts(newPosts))
       dispatch(setAfter(res.data.after))
       dispatch(postsIsFetching(false))
