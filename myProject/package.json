@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "My first React project",
   "engines": {
-    "node": "14.x"
+    "node": "14.x",
+    "npm": "6.x"
   },
   "main": "index.js",
   "scripts": {
@@ -11,7 +12,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development CLIENT_ID=GdMVQapO1hwWBTYtgyOwUw node ./bin/dev.js",
     "test": "jest",
-    "start": "./dist/server/server.js"
+    "start": "node ./dist/server/server.js"
   },
   "repository": {
     "type": "git",

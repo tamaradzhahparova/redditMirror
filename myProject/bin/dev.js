@@ -6,7 +6,6 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const express = require('express');
 
-
 const clientCompiler = webpack(webpackClientConfig);
 const hmrServer = express();
 
