@@ -10,9 +10,9 @@
   "scripts": {
     "build:dev": "cross-env NODE_ENV=development webpack",
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development CLIENT_ID=GdMVQapO1hwWBTYtgyOwUw SECRET=q8V7ITMCyvVqDW8QmU-DX-1eLBmDcQ node ./bin/dev.js",
+    "dev": "cross-env REDIRECT_URI=http://localhost:3000/auth NODE_ENV=development CLIENT_ID=GdMVQapO1hwWBTYtgyOwUw SECRET=q8V7ITMCyvVqDW8QmU-DX-1eLBmDcQ node ./bin/dev.js",
     "test": "jest",
-    "start": "cross-env SECRET=B9o4QkalLmVCfIwCfDDkKjoqM38X7w node ./dist/server/server.js"
+    "start": "node ./dist/server/server.js"
   },
   "repository": {
     "type": "git",
