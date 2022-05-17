@@ -12,7 +12,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development CLIENT_ID=GdMVQapO1hwWBTYtgyOwUw SECRET=q8V7ITMCyvVqDW8QmU-DX-1eLBmDcQ node ./bin/dev.js",
     "test": "jest",
-    "start": "cross-env CLIENT_ID=Yfg0rBCyGib0Zbzp2DDKog SECRET=B9o4QkalLmVCfIwCfDDkKjoqM38X7w node ./dist/server/server.js"
+    "start": "cross-env SECRET=B9o4QkalLmVCfIwCfDDkKjoqM38X7w node ./dist/server/server.js"
   },
   "repository": {
     "type": "git",
