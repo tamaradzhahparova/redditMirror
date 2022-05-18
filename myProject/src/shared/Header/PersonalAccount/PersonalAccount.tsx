@@ -9,7 +9,7 @@ const PersonalAccount: FC<PersonalAccountProps> = () => {
   const {data, isFetching} = useUserData()
   return (
     <a
-      href={`https://www.reddit.com/api/v1/authorize?client_id=${process.env.CLIENT_ID}&response_type=code&state=RANDOM_STRING&redirect_uri=${process.env.REDIRECT_URI}&duration=permanent&scope=read submit identity`}
+      href={`https://www.reddit.com/api/v1/authorize?client_id=${process.env.CLIENT_ID}&response_type=code&state=RANDOM_STRING&redirect_uri=https://skillbox-react-app1.herokuapp.com/auth&duration=permanent&scope=read submit identity`}
       className={styles.PersonalAccount}>
       <div className={styles.userpick}>
         {data.iconImg ? <img src={data.iconImg} alt='avatar'/> : <svg
