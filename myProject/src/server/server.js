@@ -14,7 +14,9 @@ const URI = IS_DEV ? 'http://localhost:3000/auth' : 'https://skillbox-react-app1
 
 if (!IS_DEV) {
     app.use(compression())
-    app.use(helmet())
+    app.use(helmet({
+        contentSecurityPolicy: false
+    }))
 }
 
 app.use("/static", express.static("./dist/client"));
