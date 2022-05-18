@@ -10,7 +10,6 @@ export const usePostData = (postId: string) => {
   const posts = useAppSelector(state => state.postsSlice.posts)
   const postData = posts.find(item => item.id == postId)
   
-  console.log(posts)
   
   useEffect(() => {
     if (token == 'undefined') return

@@ -22,7 +22,6 @@ const Post: FC<PostProps> = () => {
   
   
   const {comments, postData} = usePostData(postId);
-  console.log(postData)
   
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
@@ -44,7 +43,7 @@ const Post: FC<PostProps> = () => {
           <Likes ups={postData.ups}/>
           <div className={styles.PostHeaderRight}>
             <h2 className={styles.modalTitle}>{postData.title}</h2>
-            <CardMetaData name={postData.author} created={postData.created} />
+            <CardMetaData name={postData.author} created={postData.created} iconImg={postData.icon_img} />
           </div>
         </div>
         <p className={styles.PostText}>Есть над чем задуматься: тщательные исследования конкурентов представляют собой

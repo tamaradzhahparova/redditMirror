@@ -10,6 +10,7 @@ export interface IPostData {
   ups: number
   created: number,
   comments: number
+  icon_img: string
 }
 
 interface postsState {
@@ -58,10 +59,10 @@ export const savePostsData = (): ThunkAction<void, RootState, unknown, Action<st
           id: post.data.id,
           ups: post.data.ups,
           created: post.data.created * 1000,
-          comments: post.data.num_comments
+          comments: post.data.num_comments,
+          icon_img: post.data.sr_detail.icon_img
         }
       })
-      console.log(res.data.children)
       dispatch(setPosts(newPosts))
       dispatch(setAfter(res.data.after))
       dispatch(postsIsFetching(false))

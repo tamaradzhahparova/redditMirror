@@ -66,7 +66,6 @@ interface IMenuDropdownItem {
 const MenuDropdownItem: FC<IMenuDropdownItem> = ({text, icon, postId}) => (
   <li
     className={styles.menuItem} onClick={() => {
-    console.log(postId)
   }}>
     <div className={styles.menuItemIcon}>{icon}</div>
     <button className={styles.menuItemText}>{text}</button>

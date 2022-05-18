@@ -27,7 +27,7 @@ const Card: FC<CardProps> = ({post}) => {
   return (
     <li className={styles.Card}>
       <Preview img={post.photoUrl}/>
-      <TextContent postId={post.id} title={post.title} name={post.author} created={post.created} />
+      <TextContent postId={post.id} title={post.title} name={post.author} created={post.created} iconImg={post.icon_img} />
       <div className={styles.cardOptions}>
         <div className={styles.dropdownMenuWrapper}>
           <Dropdown button={<MenuButton/>} setOffsetCallback={setOffsetCallback} >

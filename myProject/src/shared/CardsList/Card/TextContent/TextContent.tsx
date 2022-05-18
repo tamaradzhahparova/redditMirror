@@ -10,22 +10,11 @@ export interface TextContentProps {
   name: string
   created: number
   postId: string
+  iconImg: string
 }
 
-const TextContent: FC<TextContentProps> = ({postId, title, name, created}) => {
+const TextContent: FC<TextContentProps> = ({postId, title, name, created, iconImg}) => {
   
-  const [iconImg, setIconImg] = useState('')
-  const token = useAppSelector(state => state.tokenSlice.token)
-
-
-  useEffect(() => {
-    if (token == 'undefined' || !token) return;
-    userApi.getUserData(token, name).then((res) => {
-      setIconImg(res.icon_img.split('?')[0])
-    })
-  }, [name, token])
-
-
   return (
     <div className={styles.TextContent}>
       <Link to={`/posts/${postId}`} className={styles.title} >
