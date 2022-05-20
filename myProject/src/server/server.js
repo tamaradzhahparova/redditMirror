@@ -12,7 +12,10 @@ const app = express();
 const IS_DEV = process.env.NODE_ENV === "development"
 const URI = IS_DEV ? 'http://localhost:3000/auth' : 'https://skillbox-react-app1.herokuapp.com/auth'
 
+console.log('хе')
+
 if (!IS_DEV) {
+    console.log('!!!')
     app.use(compression())
     app.use(
         helmet({
