@@ -17,9 +17,7 @@ if (!IS_DEV) {
     app.use(
         helmet({
             contentSecurityPolicy: false,
-            frameguard: {
-                action: "deny",
-            },
+            crossOriginEmbedderPolicy: false,
         })
     );
 }
