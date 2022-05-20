@@ -16,7 +16,7 @@ if (!IS_DEV) {
     app.use(compression())
     app.use(
         helmet({
-            referrerPolicy: { policy: "no-referrer" },
+            contentSecurityPolicy: false,
         })
     );
 }
