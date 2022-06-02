@@ -37,7 +37,7 @@ const LIST = [
 
 interface DropdownListProps {
   postId: number
-  style: { top: string, left: string }
+  style: { top: string, left?: string, right?: string }
 }
 
 

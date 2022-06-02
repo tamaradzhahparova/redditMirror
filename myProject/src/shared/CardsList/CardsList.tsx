@@ -3,11 +3,14 @@ import Card from './Card/Card';
 import styles from './CardsList.module.css';
 import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
 import {savePostsData} from "../../redux/postsSlice";
+import Login from "./Login";
 
 interface CardsListProps {
 }
 
 const CardsList: FC<CardsListProps> = () => {
+  const isAuthorized = useAppSelector(state => state.meSlice.isAuthorize)
+  const meIsFetching = useAppSelector(state => state.meSlice.isFetching)
   const isFetching = useAppSelector(state => state.postsSlice.isFetching)
   const errorLoading = useAppSelector(state => state.postsSlice.errorLoading)
   const posts = useAppSelector(state => state.postsSlice.posts)
@@ -22,7 +25,6 @@ const CardsList: FC<CardsListProps> = () => {
  
   const loadMore = (isIntersecting: boolean) => {
     if (isIntersecting && posts.length > 0 && !isThirdLoad && !isFetching) {
-      console.log('in observe dispatch')
       dispatch(savePostsData())
       setPage(prevState => prevState + 1)
     }
@@ -44,9 +46,8 @@ const CardsList: FC<CardsListProps> = () => {
     }
   }, [bottomOfList.current, posts, page, isFetching])
   
-  return (
-    <ul className={styles.CardsList}>
-     
+  return <>
+    {isAuthorized && <ul className={styles.CardsList}>
       {errorLoading && <div style={{textAlign: 'center'}}>{errorLoading}</div>}
       {!errorLoading && posts.map((post) => <Card key={post.id} post={post}/>)}
       <div ref={bottomOfList}/>
@@ -54,8 +55,11 @@ const CardsList: FC<CardsListProps> = () => {
           <button onClick={handleClick} className={styles.loadMoreButton}>Load More</button>
       </div>}
       {isFetching && <div style={{textAlign: 'center'}}>Загрузка...</div>}
-    </ul>
-  )
+    </ul>}
+    {!isAuthorized && !meIsFetching && <Login />}
+  </>
+  
+  
 };
 
 export default CardsList;

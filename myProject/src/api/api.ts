@@ -12,12 +12,6 @@ export const userApi = {
       })
     return response.data
   },
-  async getUserData(token: string, name: string) {
-    const response = await instance.get(`user/${name}/about`, {
-      headers: {Authorization: `bearer ${token}`}
-    })
-    return response.data.data
-  }
 }
 
 export const postsApi = {

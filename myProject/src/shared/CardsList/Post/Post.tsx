@@ -22,7 +22,6 @@ const Post: FC<PostProps> = () => {
   
   
   const {comments, postData} = usePostData(postId);
-  
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
       if (event.target instanceof Node && !ref.current?.contains(event.target))
@@ -43,19 +42,13 @@ const Post: FC<PostProps> = () => {
           <Likes ups={postData.ups}/>
           <div className={styles.PostHeaderRight}>
             <h2 className={styles.modalTitle}>{postData.title}</h2>
-            <CardMetaData name={postData.author} created={postData.created} iconImg={postData.icon_img} />
+            <CardMetaData name={postData.author} created={postData.created} iconImg={postData.icon_img}/>
           </div>
         </div>
-        <p className={styles.PostText}>Есть над чем задуматься: тщательные исследования конкурентов представляют собой
-          не
-          что иное, как квинтэссенцию
-          победы маркетинга над разумом и должны быть ассоциативно распределены по отраслям. Прежде всего, начало
-          повседневной работы по формированию позиции однозначно фиксирует необходимость кластеризации усилий. Но
-          сторонники тоталитаризма в науке и по сей день остаются уделом либералов, которые жаждут быть превращены в
-          посмешище, хотя само их существование приносит несомненную пользу обществу.</p>
-        <img src='https://img.freepik.com/free-photo/flat-lay-of-business-concept_53876-64851.jpg?w=2000'
-             alt='post photo'
-             className={styles.PostImg}/>
+        {postData.photoUrl && <img
+            src={postData.photoUrl}
+            alt='post photo'
+            className={styles.PostImg}/>}
         <CommentFormContainer name={postData.author}/>
         <CommentsList comments={comments}/>
       </div>

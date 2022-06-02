@@ -3,10 +3,11 @@ import styles from './Likes.module.css';
 
 interface LikesProps {
   ups?: number
+  inCard? : boolean
 }
 
-const Likes: FC<LikesProps> = ({ups}) => (
-  <div className={styles.Likes}>
+const Likes: FC<LikesProps> = ({ups, inCard}) => (
+  <div className={inCard ? `${styles.Likes} ${styles.LikesInCard}` : styles.Likes}>
     <button>
       <svg
         width="19"
@@ -18,7 +19,7 @@ const Likes: FC<LikesProps> = ({ups}) => (
         <path d="M9.5 0L0 10H19L9.5 0Z" fill="#D9D9D9"/>
       </svg>
     </button>
-    {ups ? <span className={styles.count}>{ups}</span> : <span className={styles.space}> </span>}
+    {ups ? <span className={inCard ? `${styles.count} ${styles.countInCard}` : styles.count}>{ups}</span> : <span className={styles.space}> </span>}
     <button className={styles.buttonDown}>
       <svg
         width="19"

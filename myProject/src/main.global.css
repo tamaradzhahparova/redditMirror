@@ -4,7 +4,7 @@
 
 :root {
     --black: #333;
-    --orange: #CC6633;
+    --orange: #c0581d;
     --green: #A4CC33;
     --whiteLightness: 100%;
     --white: hsl(0, 0%, var(--whiteLightness));

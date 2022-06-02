@@ -19,6 +19,7 @@ const AppComponent: FC = () => {
     setMounted(true)
   }, [])
   
+  
   return (
     <Provider store={store}>
       {mounted && (<Router>
@@ -28,7 +29,7 @@ const AppComponent: FC = () => {
             <Routes>
               <Route path='/posts' element={<CardsList/>}/>
               <Route path='/posts/:id' element={<Post/>}/>
-              <Route path="/" element={<Navigate to="/posts" replace/>}/>
+              <Route path="/" element={<Navigate to="/posts" replace/>} />
               <Route path="/auth" element={<Navigate to="/posts" replace/>}/>
               <Route path="*" element={<div style={{textAlign: 'center'}}>Страница не найдена!</div>}/>
             </Routes>

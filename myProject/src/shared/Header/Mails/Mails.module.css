@@ -36,16 +36,16 @@
 @media  (max-width: 450px) {
     .button, 
     .button svg {
-        width: 13px;
-        height: 13px;
+        width: 19px;
+        height: 19px;
         transform: unset;
     }
 
     .count {
-        margin-right: 4px;
-        width: 13px;
-        height: 13px;
-        font-size: 9px;
+        margin-right: 5px;
+        width: 19px;
+        height: 19px;
+        font-size: 12px;
     }
 }
 

@@ -1,6 +1,6 @@
 import React, {FC, useState} from 'react';
 import styles from './CommentControls.module.css';
-import {CommentIcon, ShareIcon, WarningIcon} from "../../../../../../img/icons/icons";
+import {CommentIcon, ShareIcon} from "../../../../../../img/icons/icons";
 import ReplyForm from "../ReplyForm/ReplyForm";
 
 
@@ -25,11 +25,6 @@ const CommentControls: FC<CommentControlsProps> = ({author}) => {
       <button>
         <ShareIcon/>
         <span className={styles.controlsText}>Поделиться</span>
-      </button>
-
-      <button>
-        <WarningIcon/>
-        <span className={styles.controlsText}>Пожаловаться</span>
       </button>
     </div>
     {isReplyFormOpened && <ReplyForm author={author}/>}
