@@ -37,4 +37,9 @@
     .controls {
         margin-right: 10px;
     }
+
+    .commentText {
+        padding-right: 10px;
+    }
+
 }

@@ -7,6 +7,7 @@ import CommentsList from "./CommentsList/CommentsList";
 import CommentFormContainer from "./CommentForm/CommentFormContainer";
 import {useLocation, useNavigate} from 'react-router-dom';
 import {usePostData} from "../../../hooks/usePostData";
+import {ClosePost} from "../../../img/icons/icons";
 
 interface PostProps {
 }
@@ -39,11 +40,16 @@ const Post: FC<PostProps> = () => {
     {postData && (
       <div className={styles.PostContent} ref={ref}>
         <div className={styles.PostHeader}>
-          <Likes ups={postData.ups}/>
-          <div className={styles.PostHeaderRight}>
-            <h2 className={styles.modalTitle}>{postData.title}</h2>
-            <CardMetaData name={postData.author} created={postData.created} iconImg={postData.icon_img}/>
+          <div className={styles.postHeaderWrapper}>
+            <Likes ups={postData.ups}/>
+            <div className={styles.PostHeaderRight}>
+              <h2 className={styles.modalTitle}>{postData.title}</h2>
+              <CardMetaData name={postData.author} created={postData.created} iconImg={postData.icon_img}/>
+            </div>
           </div>
+          <button onClick={() => navigate('/')} className={styles.closeBtn}>
+            <ClosePost/>
+          </button>
         </div>
         {postData.photoUrl && <img
             src={postData.photoUrl}
