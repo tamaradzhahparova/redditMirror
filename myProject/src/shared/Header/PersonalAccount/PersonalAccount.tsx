@@ -5,7 +5,7 @@ import {useUserData} from "../../../hooks/useUserData";
 interface PersonalAccountProps {
 }
 
-const URI = process.env.NODE_ENV === "development" ? 'http://localhost:3000/auth' : 'https://skillbox-react-app1.herokuapp.com/auth'
+const URI = process.env.NODE_ENV === "development" ? 'http://localhost:3000/auth' : 'https://reddit-react-app1.herokuapp.com/auth'
 
 const PersonalAccount: FC<PersonalAccountProps> = () => {
   const {data, isFetching} = useUserData()

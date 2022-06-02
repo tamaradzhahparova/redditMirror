@@ -5,7 +5,7 @@ import styles from "./Login.module.css";
 interface LoginProps {
 }
 
-const URI = process.env.NODE_ENV === "development" ? 'http://localhost:3000/auth' : 'https://skillbox-react-app1.herokuapp.com/auth'
+const URI = process.env.NODE_ENV === "development" ? 'http://localhost:3000/auth' : 'https://reddit-react-app1.herokuapp.com/auth'
 
 const Login: FC<LoginProps> = () => {
   return <div className={styles.Login}>
