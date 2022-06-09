@@ -9,7 +9,7 @@ interface ControlsProps {
 
 const Controls: FC<ControlsProps> = ({ups, comments}) => (
   <div className={styles.Controls}>
-    <Likes ups={ups} />
+    <Likes ups={ups} inCard={true}/>
 
     <div>
       <button className={styles.comments}>

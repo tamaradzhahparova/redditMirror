@@ -16,3 +16,9 @@
     font-size: 14px;
     color: var(--gray99);
 }
+
+@media (max-width: 700px) {
+    .CommentControls button:not(:last-child) {
+        margin-right: 15px;
+    }
+}

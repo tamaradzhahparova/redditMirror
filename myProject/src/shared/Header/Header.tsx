@@ -3,7 +3,6 @@ import * as React from "react";
 import s from "./header.module.css";
 import {SearchBlock} from "./SearchBlock/SearchBlock";
 import ThreadTitle from "./ThreadTitle/ThreadTitle";
-import SortBlock from "./SortBlock/SortBlock";
 import Mails from "./Mails/Mails";
 import PersonalAccount from "./PersonalAccount/PersonalAccount";
 
@@ -12,7 +11,6 @@ const HeaderComponent = () => {
     <header className={s.header}>
       <div className={s.headerLeft}>
         <ThreadTitle/>
-        <SortBlock/>
       </div>
       <div className={s.headerRight}>
         <Mails/>

@@ -20,7 +20,6 @@ const Dropdown: FC<DropdownProps> = ({button, children, setOffsetCallback, isOpe
     const {top} = document.body.getBoundingClientRect()
     const {x, y} = e.target.getBoundingClientRect()
     setOffsetCallback({x: x - 20, y: -top + y + 50})
-    console.log('click')
     setIsDropdownOpen(!isDropdownOpen)
   }
 

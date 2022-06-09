@@ -1,6 +1,6 @@
 .CommentForm {
     position: relative;
-    padding-bottom: 68px;
+    padding-bottom: 38px;
     border-bottom: 1px solid var(--grayD9);
 }
 
@@ -58,4 +58,19 @@ label span {
     display: flex;
     justify-content: end;
     background-color: #E5E5E5;
+}
+
+@media  (max-width: 560px) {
+    .CommentForm {
+        padding-bottom: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .commentButton {
+        width: 35%;
+        font-size: 12px;
+    }
 }

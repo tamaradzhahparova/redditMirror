@@ -5,11 +5,13 @@ import {useUserData} from "../../../hooks/useUserData";
 interface PersonalAccountProps {
 }
 
+const URI = process.env.NODE_ENV === "development" ? 'http://localhost:3000/auth' : 'https://my-own-reddit.herokuapp.com/auth'
+
 const PersonalAccount: FC<PersonalAccountProps> = () => {
   const {data, isFetching} = useUserData()
   return (
     <a
-      href={`https://www.reddit.com/api/v1/authorize?client_id=${process.env.CLIENT_ID}&response_type=code&state=RANDOM_STRING&redirect_uri=http://localhost:3000/auth&duration=permanent&scope=read submit identity`}
+      href={`https://www.reddit.com/api/v1/authorize?client_id=${process.env.CLIENT_ID}&response_type=code&state=RANDOM_STRING&redirect_uri=${URI}&duration=permanent&scope=read submit identity`}
       className={styles.PersonalAccount}>
       <div className={styles.userpick}>
         {data.iconImg ? <img src={data.iconImg} alt='avatar'/> : <svg

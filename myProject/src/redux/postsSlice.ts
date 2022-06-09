@@ -10,6 +10,7 @@ export interface IPostData {
   ups: number
   created: number,
   comments: number
+  icon_img: string
 }
 
 interface postsState {
@@ -48,27 +49,31 @@ export const postsSlice = createSlice({
 export const savePostsData = (): ThunkAction<void, RootState, unknown, Action<string>> => (dispatch, getState) => {
   const token = getState().tokenSlice.token
   const after = getState().postsSlice.after
-    dispatch(postsIsFetching(true));
-    postsApi.getBestPosts(token, after).then((res) => {
-      const newPosts = res.data.children.map((post: any): IPostData => {
-        return {
+  if (!token || token == 'undefined') return
+  dispatch(postsIsFetching(true));
+  postsApi.getBestPosts(token, after).then((res) => {
+    const newPosts = res.data.children.map((post: any): IPostData => {
+      const imgUrl = post.data.url.slice(post.data.url.length - 3, post.data.url.length)
+      const isImage = imgUrl == 'jpg' || imgUrl == 'png'
+      return {
           title: post.data.title,
           author: post.data.author,
-          photoUrl: post.data.url,
+          photoUrl: isImage ? post.data.url : undefined,
           id: post.data.id,
           ups: post.data.ups,
           created: post.data.created * 1000,
-          comments: post.data.num_comments
+          comments: post.data.num_comments,
+          icon_img: post.data.sr_detail.icon_img
         }
-      })
-      dispatch(setPosts(newPosts))
-      dispatch(setAfter(res.data.after))
-      dispatch(postsIsFetching(false))
-    }).catch((error) => {
-      dispatch(postsIsFetching(false))
-      dispatch(setErrorMessage(error.toString()));
     })
+    dispatch(setPosts(newPosts))
+    dispatch(setAfter(res.data.after))
+    dispatch(postsIsFetching(false))
+  }).catch((error) => {
+    dispatch(postsIsFetching(false))
+    dispatch(setErrorMessage(error.toString()));
+  })
 }
 
 
-export const { setPosts, postsIsFetching, setErrorMessage, setAfter } = postsSlice.actions
+export const {setPosts, postsIsFetching, setErrorMessage, setAfter} = postsSlice.actions

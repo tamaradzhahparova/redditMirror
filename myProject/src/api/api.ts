@@ -12,12 +12,6 @@ export const userApi = {
       })
     return response.data
   },
-  async getUserData(token: string, name: string) {
-    const response = await instance.get(`user/${name}/about`, {
-      headers: {Authorization: `bearer ${token}`}
-    })
-    return response.data.data
-  }
 }
 
 export const postsApi = {
@@ -28,7 +22,7 @@ export const postsApi = {
     return response.data
   },
   async getBestPosts(token: string, after: string | null) {
-    const response = await instance.get('best.json', {
+    const response = await instance.get('best.json?sr_detail=true', {
       headers: {Authorization: `bearer ${token}`},
       params: {limit: 10, after: after}
     })

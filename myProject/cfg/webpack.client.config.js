@@ -14,6 +14,17 @@ function setupDevtool() {
   if (IS_PROD) return false;
 }
 
+const getEntry = () => {
+  if (IS_PROD) {
+    return [path.resolve(__dirname, "../src/client/index.jsx")]
+  }
+
+  return [
+    path.resolve(__dirname, "../src/client/index.jsx"),
+    "webpack-hot-middleware/client?path=http://localhost:3001/static/__webpack_hmr",
+  ]
+}
+
 module.exports = {
   mode: NODE_ENV ? NODE_ENV : "development",
   resolve: {
@@ -22,10 +33,7 @@ module.exports = {
       "react-dom": IS_DEV ? "@hot-loader/react-dom" : "react-dom",
     },
   },
-  entry: [
-    path.resolve(__dirname, "../src/client/index.jsx"),
-    "webpack-hot-middleware/client?path=http://localhost:3001/static/__webpack_hmr",
-  ],
+  entry: getEntry(),
   output: {
     path: path.resolve(__dirname, "../dist/client"),
     filename: "client.js",

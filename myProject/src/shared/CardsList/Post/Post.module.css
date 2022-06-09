@@ -23,27 +23,62 @@
 
 .modalTitle {
     margin-bottom: 10px;
+    padding-right: 10px;
     font-size: 20px;
     line-height: 23px;
     font-weight: normal;
 }
 
+.postHeaderWrapper {
+    display: flex;
+}
+
 .PostHeader {
     display: flex;
+    margin-bottom: 40px;
 }
 
 .PostHeaderRight {
     margin-left: 20px;
 }
 
-.PostText {
-    margin: 0;
-    padding: 28px 0;
-    font-size: 14px;
-    line-height: 23px;
-}
-
 .PostImg {
     max-width: 100%;
     margin-bottom: 50px;
+}
+
+.closeBtn {
+    display: none;
+}
+
+
+@media  (max-width: 1100px) {
+
+    .PostHeader {
+        justify-content: space-between;
+    }
+    .closeBtn {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+@media  (max-width: 560px) {
+    .Post {
+        top: 0;
+    }
+
+    .PostContent {
+        padding: 30px;
+    }
+
+    .modalTitle {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .PostHeader {
+        margin-bottom: 20px;
+    }
 }
