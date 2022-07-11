@@ -27,7 +27,7 @@
 
 [reddit mirror](https://my-own-reddit.herokuapp.com/posts)
 
-<img align="center" width="80" src="./myProject/src/img/login">
+<img align="center" width="80" src="./myProject/src/img/login.png">
 <img align="center" width="80" src="./myProject/src/img/newsFeed">
 <img align="center" width="80" src="./myProject/src/img/Posts">
 <img align="center" width="80" src="./myProject/src/img/commentAndReply">
