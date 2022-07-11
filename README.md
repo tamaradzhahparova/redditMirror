@@ -34,7 +34,7 @@
 <img align="center" width="100%" src="./myProject/src/img/newsFeed.png">
 
 - Пост с комментариями (модальное окно)
-<img align="center" width="100%" src="./myProject/src/img/Posts.png">
+<img align="center" width="100%" src="./myProject/src/img/Post.png">
 
 - Комментарий и форма ответа
 <img align="center" width="100%" src="./myProject/src/img/commentAndReply.png">
