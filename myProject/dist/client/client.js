@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "58fb405344b2a4161518";
+/******/ 	var hotCurrentHash = "a49ab4b132738c700bfc";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2828,7 +2828,7 @@ eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar Login_module_css_1 = __importDefault(__webpack_require__(/*! ./Login.module.css */ \"./src/shared/CardsList/Login.module.css\"));\nvar URI =  true ? 'http://localhost:3000/auth' : undefined;\nvar Login = function () {\n    return react_1.default.createElement(\"div\", { className: Login_module_css_1.default.Login },\n        react_1.default.createElement(\"div\", { className: Login_module_css_1.default.text }, \"\\u041F\\u043E\\u0436\\u0430\\u043B\\u0443\\u0439\\u0441\\u0442\\u0430, \\u0437\\u0430\\u0440\\u0435\\u0433\\u0438\\u0441\\u0442\\u0440\\u0438\\u0440\\u0443\\u0439\\u0442\\u0435\\u0441\\u044C\"),\n        react_1.default.createElement(\"div\", null,\n            react_1.default.createElement(\"a\", { href: \"https://www.reddit.com/api/v1/authorize?client_id=\" + 'GdMVQapO1hwWBTYtgyOwUw' + \"&response_type=code&state=RANDOM_STRING&redirect_uri=\" + URI + \"&duration=permanent&scope=read submit identity\", className: Login_module_css_1.default.link }, \"\\u0412\\u043E\\u0439\\u0442\\u0438\")));\n};\nexports.default = Login;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Login.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar react_1 = __importDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\nvar Login_module_css_1 = __importDefault(__webpack_require__(/*! ./Login.module.css */ \"./src/shared/CardsList/Login.module.css\"));\nvar URI =  true ? 'http://localhost:3000/auth' : undefined;\nvar Login = function () {\n    return react_1.default.createElement(\"div\", { className: Login_module_css_1.default.Login },\n        react_1.default.createElement(\"div\", { className: Login_module_css_1.default.text }, \"\\u0414\\u043B\\u044F \\u043F\\u0440\\u043E\\u0441\\u043C\\u043E\\u0442\\u0440\\u0430 \\u043F\\u043E\\u0441\\u0442\\u043E\\u0432 \\u0432\\u043E\\u0439\\u0434\\u0438\\u0442\\u0435 \\u0447\\u0435\\u0440\\u0435\\u0437 reddit.com\"),\n        react_1.default.createElement(\"div\", null,\n            react_1.default.createElement(\"a\", { href: \"https://www.reddit.com/api/v1/authorize?client_id=\" + 'GdMVQapO1hwWBTYtgyOwUw' + \"&response_type=code&state=RANDOM_STRING&redirect_uri=\" + URI + \"&duration=permanent&scope=read submit identity\", className: Login_module_css_1.default.link }, \"\\u0412\\u043E\\u0439\\u0442\\u0438\")));\n};\nexports.default = Login;\n\n\n//# sourceURL=webpack:///./src/shared/CardsList/Login.tsx?");
 
 /***/ }),
 
