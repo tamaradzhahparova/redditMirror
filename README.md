@@ -30,7 +30,7 @@
 - Страница авторизации
 <img align="center" width="100%" src="./myProject/src/img/login.png">
 
-- Лента постов
+- Лента постов с бесконечной прокруткой
 <img align="center" width="100%" src="./myProject/src/img/newsFeed.png">
 
 - Пост с комментариями (модальное окно)
@@ -38,3 +38,6 @@
 
 - Комментарий и форма ответа
 <img align="center" width="100%" src="./myProject/src/img/commentAndReply.png">
+
+- Дропдаун
+<img align="center" width="100%" src="./myProject/src/img/Dropdown.png">
