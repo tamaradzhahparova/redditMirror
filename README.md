@@ -27,7 +27,14 @@
 
 [reddit mirror](https://my-own-reddit.herokuapp.com/posts)
 
+- Страница авторизации
 <img align="center" width="100%" src="./myProject/src/img/login.png">
+
+- Лента постов
 <img align="center" width="100%" src="./myProject/src/img/newsFeed.png">
+
+- Пост с комментариями (модальное окно)
 <img align="center" width="100%" src="./myProject/src/img/Posts.png">
+
+- Комментарий и форма ответа
 <img align="center" width="100%" src="./myProject/src/img/commentAndReply.png">
