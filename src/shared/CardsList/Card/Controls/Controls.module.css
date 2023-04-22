@@ -1,0 +1,41 @@
+.comments,
+.share,
+.addPost {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .Controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 20px;
+    }
+
+    .share {
+        margin-right: 15px;
+    }
+
+    .buttonsRight {
+        display: flex;
+    }
+
+    .comments svg {
+        margin-right: 6px;
+        transform: translateY(4px);
+    }
+
+    .comments span {
+        color: var(--grayC4);
+    }
+
+    .comments,
+    .share,
+    .addPost {
+        display: block;
+    }
+}

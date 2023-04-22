@@ -1,0 +1,51 @@
+.Mails {
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.count {
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    color: var(--white);
+    background-color: var(--orange);
+    border-radius: 100px;
+    width: 20px;
+    height: 20px;
+    font-weight: 500;
+}
+
+.button svg {
+    transform: translate(0, 1px);
+}
+
+@media  (max-width: 1100px) {
+    .Mails {
+        margin-right: 30px;
+    }
+}
+
+@media  (max-width: 800px) {
+    .Mails {
+        margin-right: 0;
+        justify-content: end;
+    }
+}
+
+@media  (max-width: 450px) {
+    .button, 
+    .button svg {
+        width: 19px;
+        height: 19px;
+        transform: unset;
+    }
+
+    .count {
+        margin-right: 5px;
+        width: 19px;
+        height: 19px;
+        font-size: 12px;
+    }
+}
+

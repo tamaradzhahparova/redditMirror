@@ -1,0 +1,67 @@
+.PersonalAccount {
+    display: flex;
+    align-items: center;
+}
+
+.PersonalAccount:hover .username {
+    color: var(--orange);
+}
+
+.PersonalAccount:hover .userpick::after {
+    border-color: var(--orange);
+}
+
+.userpick {
+    position: relative;
+    margin-right: 13px;
+    width: 50px;
+    height: 50px;
+}
+
+.userpick img {
+    border-radius: 100px;
+}
+
+.userpick::after {
+    content: '';
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    left: -5px;
+    top: -5px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    transition: border-color .2s ease-in-out;
+}
+
+.username {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--gray99);
+    transition: color .2s ease-in-out;
+}
+
+@media (max-width: 560px) {
+    .username {
+        display: none;
+    }
+
+    .userpick {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .userpick,
+    .userpick svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .userpick::after {
+        width: 40px;
+        height: 40px;
+        left: -4px;
+        top: -4px;
+    }
+}

@@ -1,0 +1,73 @@
+.SearchBlock {}
+
+.input {
+    width: 361px;
+    height: 50px;
+    margin-right: 50px;
+    padding-left: 58px;
+    background-color: var(--white);
+    outline: none;
+    border: none;
+    border-radius: 30px;
+}
+
+.input::placeholder {
+    font-size: 20px;
+    color: var(--grayC4);
+}
+
+.form {
+    position: relative;
+}
+
+.button {
+    position: absolute;
+    left: 29px;
+    top: calc(50% - 10px);
+}
+
+@media  (max-width: 1100px) {
+    .input {
+        margin-right: 30px;
+        width: 280px;
+    }
+}
+
+@media  (max-width: 800px) {
+    .SearchBlock {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .input {
+        margin-right: 0;
+        background-color: var(--grayF4);
+    } 
+}
+
+@media  (max-width: 560px) {
+    .SearchBlock {
+        margin: 0;
+    }
+}
+
+@media  (max-width: 450px) {
+    .input {
+        padding-left: 31px;
+        width: 192px;
+        height: 30px;
+    }
+
+    .button {
+        left: 12px;
+        top: 5px;
+    }
+
+    .button svg {
+        transform: scale(0.7);
+    }
+
+    .input::placeholder {
+        font-size: 12px;
+    }
+}
