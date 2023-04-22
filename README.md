@@ -28,16 +28,16 @@
 [reddit mirror](https://my-own-reddit.herokuapp.com/posts)
 
 - Страница авторизации
-<img align="center" width="100%" src="./myProject/src/img/login.png">
+<img align="center" width="100%" src="./src/img/login.png">
 
 - Лента постов с бесконечной прокруткой
-<img align="center" width="100%" src="./myProject/src/img/newsFeed.png">
+<img align="center" width="100%" src="./src/img/newsFeed.png">
 
 - Пост с комментариями (модальное окно)
-<img align="center" width="100%" src="./myProject/src/img/Post.png">
+<img align="center" width="100%" src="./src/img/Post.png">
 
 - Комментарий и форма ответа
-<img align="center" width="100%" src="./myProject/src/img/commentAndReply.png">
+<img align="center" width="100%" src="./src/img/commentAndReply.png">
 
 - Дропдаун
-<img align="center" width="100%" src="./myProject/src/img/Dropdown.png">
+<img align="center" width="100%" src="./src/img/Dropdown.png">
